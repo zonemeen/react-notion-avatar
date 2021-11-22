@@ -1,0 +1,22 @@
+// system file
+*.log
+.DS_Store*
+.idea/
+
+// specific files
+node_modules/
+test/
+src/
+
+// setting files
+.babelrc
+.travis.yml
+.eslintrc
+.eslintignore
+.prettierrc
+.gitignore
+
+website
+demo
+Makefile
+README.md
