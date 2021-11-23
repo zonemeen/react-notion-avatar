@@ -1,0 +1,32 @@
+import React from 'react'
+
+const Eye0 = () => {
+  return (
+    <svg
+      style={{
+        position: 'absolute',
+      }}
+      width="1080px"
+      height="1080px"
+      viewBox="0 0 1080 1080"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        id="Eyes/-0"
+        stroke="none"
+        strokeWidth="1"
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M570,516 C583.254834,516 594,526.745166 594,540 C594,553.254834 583.254834,564 570,564 C556.745166,564 546,553.254834 546,540 C546,526.745166 556.745166,516 570,516 Z M708,516 C721.254834,516 732,526.745166 732,540 C732,553.254834 721.254834,564 708,564 C694.745166,564 684,553.254834 684,540 C684,526.745166 694.745166,516 708,516 Z"
+          id="Combined-Shape"
+          fill="#000000"
+        />
+      </g>
+    </svg>
+  )
+}
+
+export default Eye0
