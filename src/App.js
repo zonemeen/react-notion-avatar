@@ -16,7 +16,14 @@ const App = () => {
   }*/
   return (
     <div>
-      <NotionAvatar />
+      <NotionAvatar
+        style={{
+          width: '180px',
+          height: '180px',
+          position: 'absolute',
+          left: '50%',
+        }}
+      />
     </div>
   )
 }

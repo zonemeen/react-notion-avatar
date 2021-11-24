@@ -37,16 +37,22 @@ const NotionAvatar = (props) => {
   const realConfig = getConfig(props.config)
   return (
     <div {...props}>
-      <Face type={Number(realConfig.face)} />
-      <Eye type={Number(realConfig.eye)} />
-      <Eyebrow type={Number(realConfig.eyebrow)} />
-      <Glass type={Number(realConfig.glass)} />
-      <Hair type={Number(realConfig.hair)} />
-      <Mouth type={Number(realConfig.mouth)} />
-      <Nose type={Number(realConfig.nose)} />
-      <Accessory type={Number(realConfig.accessory)} />
-      <Beard type={Number(realConfig.beard)} />
-      <Detail type={Number(realConfig.detail)} />
+      <svg
+        viewBox="0 0 1080 1080"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <Face type={Number(realConfig.face)} />
+        <Eye type={Number(realConfig.eye)} />
+        <Eyebrow type={Number(realConfig.eyebrow)} />
+        <Glass type={Number(realConfig.glass)} />
+        <Hair type={Number(realConfig.hair)} />
+        <Mouth type={Number(realConfig.mouth)} />
+        <Nose type={Number(realConfig.nose)} />
+        <Accessory type={Number(realConfig.accessory)} />
+        <Beard type={Number(realConfig.beard)} />
+        <Detail type={Number(realConfig.detail)} />
+      </svg>
     </div>
   )
 }
