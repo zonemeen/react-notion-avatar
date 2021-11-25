@@ -49,12 +49,12 @@ yarn add react-notion-avatar
 
 3. Render the component with specific width / height and configuration.
     ```jsx
-    <NotionAvatar style={{ width: '6rem', height: '6rem' }} {...config} />
+    <NotionAvatar style={{ width: '6rem', height: '6rem' }} config={config} />
     ```
     or
     
     ```jsx
-    <NotionAvatar className="className" {...config} />
+    <NotionAvatar className="className" config={config} />
     ```
     or
      ```jsx

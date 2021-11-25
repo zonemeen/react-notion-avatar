@@ -2,7 +2,7 @@ import React from 'react'
 import NotionAvatar from 'react-notion-avatar'
 
 const App = () => {
-  /* const config = {
+  const config = {
     eye: 3,
     eyebrow: 3,
     face: 4,
@@ -13,15 +13,15 @@ const App = () => {
     accessory: 0,
     beard: 0,
     detail: 0,
-  }*/
+  }
   return (
     <div>
       <NotionAvatar
+        config={config}
         style={{
-          width: '180px',
-          height: '180px',
+          width: '700px',
+          height: '700px',
           position: 'absolute',
-          left: '50%',
         }}
       />
     </div>
