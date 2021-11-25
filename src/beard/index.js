@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Beard0 from './0'
-import Beard1 from './1'
-import Beard2 from './2'
-import Beard3 from './3'
-import Beard4 from './4'
-import Beard5 from './5'
-import Beard6 from './6'
-import Beard7 from './7'
-import Beard8 from './8'
-import Beard9 from './9'
-import Beard10 from './10'
+import Beard0 from './0.jsx'
+import Beard1 from './1.jsx'
+import Beard2 from './2.jsx'
+import Beard3 from './3.jsx'
+import Beard4 from './4.jsx'
+import Beard5 from './5.jsx'
+import Beard6 from './6.jsx'
+import Beard7 from './7.jsx'
+import Beard8 from './8.jsx'
+import Beard9 from './9.jsx'
+import Beard10 from './10.jsx'
 
 const Beard = ({ type }) => {
   return (

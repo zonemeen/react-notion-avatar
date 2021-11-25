@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Eye0 from './0'
-import Eye1 from './1'
-import Eye2 from './2'
-import Eye3 from './3'
-import Eye4 from './4'
-import Eye5 from './5'
-import Eye6 from './6'
-import Eye7 from './7'
-import Eye8 from './8'
-import Eye9 from './9'
-import Eye10 from './10'
+import Eye0 from './0.jsx'
+import Eye1 from './1.jsx'
+import Eye2 from './2.jsx'
+import Eye3 from './3.jsx'
+import Eye4 from './4.jsx'
+import Eye5 from './5.jsx'
+import Eye6 from './6.jsx'
+import Eye7 from './7.jsx'
+import Eye8 from './8.jsx'
+import Eye9 from './9.jsx'
+import Eye10 from './10.jsx'
 
 const Eye = ({ type }) => {
   return (

@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Glass0 from './0'
-import Glass1 from './1'
-import Glass2 from './2'
-import Glass3 from './3'
-import Glass4 from './4'
-import Glass5 from './5'
-import Glass6 from './6'
-import Glass7 from './7'
-import Glass8 from './8'
-import Glass9 from './9'
-import Glass10 from './10'
+import Glass0 from './0.jsx'
+import Glass1 from './1.jsx'
+import Glass2 from './2.jsx'
+import Glass3 from './3.jsx'
+import Glass4 from './4.jsx'
+import Glass5 from './5.jsx'
+import Glass6 from './6.jsx'
+import Glass7 from './7.jsx'
+import Glass8 from './8.jsx'
+import Glass9 from './9.jsx'
+import Glass10 from './10.jsx'
 
 const Glass = ({ type }) => {
   return (

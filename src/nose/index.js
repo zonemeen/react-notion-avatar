@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Nose0 from './0'
-import Nose1 from './1'
-import Nose2 from './2'
-import Nose3 from './3'
-import Nose4 from './4'
-import Nose5 from './5'
-import Nose6 from './6'
-import Nose7 from './7'
-import Nose8 from './8'
-import Nose9 from './9'
-import Nose10 from './10'
+import Nose0 from './0.jsx'
+import Nose1 from './1.jsx'
+import Nose2 from './2.jsx'
+import Nose3 from './3.jsx'
+import Nose4 from './4.jsx'
+import Nose5 from './5.jsx'
+import Nose6 from './6.jsx'
+import Nose7 from './7.jsx'
+import Nose8 from './8.jsx'
+import Nose9 from './9.jsx'
+import Nose10 from './10.jsx'
 
 const Nose = ({ type }) => {
   return (

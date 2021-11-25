@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Mouth0 from './0'
-import Mouth1 from './1'
-import Mouth2 from './2'
-import Mouth3 from './3'
-import Mouth4 from './4'
-import Mouth5 from './5'
-import Mouth6 from './6'
-import Mouth7 from './7'
-import Mouth8 from './8'
-import Mouth9 from './9'
-import Mouth10 from './10'
+import Mouth0 from './0.jsx'
+import Mouth1 from './1.jsx'
+import Mouth2 from './2.jsx'
+import Mouth3 from './3.jsx'
+import Mouth4 from './4.jsx'
+import Mouth5 from './5.jsx'
+import Mouth6 from './6.jsx'
+import Mouth7 from './7.jsx'
+import Mouth8 from './8.jsx'
+import Mouth9 from './9.jsx'
+import Mouth10 from './10.jsx'
 
 const Mouth = ({ type }) => {
   return (

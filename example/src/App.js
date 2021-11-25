@@ -1,5 +1,5 @@
 import React from 'react'
-import NotionAvatar from './NotionAvatar'
+import NotionAvatar from 'react-notion-avatar'
 
 const App = () => {
   /* const config = {

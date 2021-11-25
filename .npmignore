@@ -7,6 +7,8 @@
 node_modules/
 test/
 src/
+example/
+scripts/
 
 // setting files
 .babelrc
@@ -16,7 +18,4 @@ src/
 .prettierrc
 .gitignore
 
-website
-demo
-Makefile
 README.md

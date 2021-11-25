@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Eyebrow0 from './0'
-import Eyebrow1 from './1'
-import Eyebrow2 from './2'
-import Eyebrow3 from './3'
-import Eyebrow4 from './4'
-import Eyebrow5 from './5'
-import Eyebrow6 from './6'
-import Eyebrow7 from './7'
-import Eyebrow8 from './8'
-import Eyebrow9 from './9'
-import Eyebrow10 from './10'
+import Eyebrow0 from './0.jsx'
+import Eyebrow1 from './1.jsx'
+import Eyebrow2 from './2.jsx'
+import Eyebrow3 from './3.jsx'
+import Eyebrow4 from './4.jsx'
+import Eyebrow5 from './5.jsx'
+import Eyebrow6 from './6.jsx'
+import Eyebrow7 from './7.jsx'
+import Eyebrow8 from './8.jsx'
+import Eyebrow9 from './9.jsx'
+import Eyebrow10 from './10.jsx'
 
 const Eyebrow = ({ type }) => {
   return (

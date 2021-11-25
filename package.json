@@ -1,42 +1,70 @@
 {
   "name": "react-notion-avatar",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
+  "version": "1.0.0",
+  "description": "react library for generating notion-style avatar",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "npx webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
+    "build": "rm -rf ./dist && npx webpack --config ./scripts/webpack.prod.config.js --progress --bail",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miqilin21/react-notion-avatar.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "react",
+    "avatar",
+    "notion",
+    "react-avatar",
+    "notion-style avatar"
+  ],
+  "author": "miqilin21",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miqilin21/react-notion-avatar/issues"
+  },
+  "homepage": "https://github.com/miqilin21/react-notion-avatar#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-syntax-async-generators": "^7.8.4",
+    "@babel/plugin-transform-regenerator": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.14.5",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^3.2.0",
+    "dom-to-image": "^2.6.0",
+    "file-loader": "^6.2.0",
+    "file-saver": "^2.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^1.6.2",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^4.3.0",
     "prettier": "^2.4.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.12.15",
+    "react-notion-avatar": "^1.0.0",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.2.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.1.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
   }
 }

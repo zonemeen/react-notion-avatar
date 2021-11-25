@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Accessory0 from './0'
-import Accessory1 from './1'
-import Accessory2 from './2'
-import Accessory3 from './3'
-import Accessory4 from './4'
-import Accessory5 from './5'
-import Accessory6 from './6'
-import Accessory7 from './7'
-import Accessory8 from './8'
-import Accessory9 from './9'
-import Accessory10 from './10'
+import Accessory0 from './0.jsx'
+import Accessory1 from './1.jsx'
+import Accessory2 from './2.jsx'
+import Accessory3 from './3.jsx'
+import Accessory4 from './4.jsx'
+import Accessory5 from './5.jsx'
+import Accessory6 from './6.jsx'
+import Accessory7 from './7.jsx'
+import Accessory8 from './8.jsx'
+import Accessory9 from './9.jsx'
+import Accessory10 from './10.jsx'
 
 const Accessory = ({ type }) => {
   return (
