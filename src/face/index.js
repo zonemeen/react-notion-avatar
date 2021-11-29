@@ -13,21 +13,44 @@ import Face9 from './9.jsx'
 import Face10 from './10.jsx'
 
 const Face = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Face0 />}
-      {type === 1 && <Face1 />}
-      {type === 2 && <Face2 />}
-      {type === 3 && <Face3 />}
-      {type === 4 && <Face4 />}
-      {type === 5 && <Face5 />}
-      {type === 6 && <Face6 />}
-      {type === 7 && <Face7 />}
-      {type === 8 && <Face8 />}
-      {type === 9 && <Face9 />}
-      {type === 10 && <Face10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Face0 />
+    }
+    case 1: {
+      return <Face1 />
+    }
+    case 2: {
+      return <Face2 />
+    }
+    case 3: {
+      return <Face3 />
+    }
+    case 4: {
+      return <Face4 />
+    }
+    case 5: {
+      return <Face5 />
+    }
+    case 6: {
+      return <Face6 />
+    }
+    case 7: {
+      return <Face7 />
+    }
+    case 8: {
+      return <Face8 />
+    }
+    case 9: {
+      return <Face9 />
+    }
+    case 10: {
+      return <Face10 />
+    }
+    default: {
+      return <Face0 />
+    }
+  }
 }
 
 export default Face

@@ -13,21 +13,44 @@ import Accessory9 from './9.jsx'
 import Accessory10 from './10.jsx'
 
 const Accessory = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Accessory0 />}
-      {type === 1 && <Accessory1 />}
-      {type === 2 && <Accessory2 />}
-      {type === 3 && <Accessory3 />}
-      {type === 4 && <Accessory4 />}
-      {type === 5 && <Accessory5 />}
-      {type === 6 && <Accessory6 />}
-      {type === 7 && <Accessory7 />}
-      {type === 8 && <Accessory8 />}
-      {type === 9 && <Accessory9 />}
-      {type === 10 && <Accessory10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Accessory0 />
+    }
+    case 1: {
+      return <Accessory1 />
+    }
+    case 2: {
+      return <Accessory2 />
+    }
+    case 3: {
+      return <Accessory3 />
+    }
+    case 4: {
+      return <Accessory4 />
+    }
+    case 5: {
+      return <Accessory5 />
+    }
+    case 6: {
+      return <Accessory6 />
+    }
+    case 7: {
+      return <Accessory7 />
+    }
+    case 8: {
+      return <Accessory8 />
+    }
+    case 9: {
+      return <Accessory9 />
+    }
+    case 10: {
+      return <Accessory10 />
+    }
+    default: {
+      return <Accessory0 />
+    }
+  }
 }
 
 export default Accessory

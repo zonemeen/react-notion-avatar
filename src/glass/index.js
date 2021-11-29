@@ -13,21 +13,44 @@ import Glass9 from './9.jsx'
 import Glass10 from './10.jsx'
 
 const Glass = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Glass0 />}
-      {type === 1 && <Glass1 />}
-      {type === 2 && <Glass2 />}
-      {type === 3 && <Glass3 />}
-      {type === 4 && <Glass4 />}
-      {type === 5 && <Glass5 />}
-      {type === 6 && <Glass6 />}
-      {type === 7 && <Glass7 />}
-      {type === 8 && <Glass8 />}
-      {type === 9 && <Glass9 />}
-      {type === 10 && <Glass10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Glass0 />
+    }
+    case 1: {
+      return <Glass1 />
+    }
+    case 2: {
+      return <Glass2 />
+    }
+    case 3: {
+      return <Glass3 />
+    }
+    case 4: {
+      return <Glass4 />
+    }
+    case 5: {
+      return <Glass5 />
+    }
+    case 6: {
+      return <Glass6 />
+    }
+    case 7: {
+      return <Glass7 />
+    }
+    case 8: {
+      return <Glass8 />
+    }
+    case 9: {
+      return <Glass9 />
+    }
+    case 10: {
+      return <Glass10 />
+    }
+    default: {
+      return <Glass0 />
+    }
+  }
 }
 
 export default Glass

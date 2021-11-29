@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Eye0 = () => {
   return (
     <g

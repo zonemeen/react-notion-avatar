@@ -13,21 +13,44 @@ import Nose9 from './9.jsx'
 import Nose10 from './10.jsx'
 
 const Nose = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Nose0 />}
-      {type === 1 && <Nose1 />}
-      {type === 2 && <Nose2 />}
-      {type === 3 && <Nose3 />}
-      {type === 4 && <Nose4 />}
-      {type === 5 && <Nose5 />}
-      {type === 6 && <Nose6 />}
-      {type === 7 && <Nose7 />}
-      {type === 8 && <Nose8 />}
-      {type === 9 && <Nose9 />}
-      {type === 10 && <Nose10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Nose0 />
+    }
+    case 1: {
+      return <Nose1 />
+    }
+    case 2: {
+      return <Nose2 />
+    }
+    case 3: {
+      return <Nose3 />
+    }
+    case 4: {
+      return <Nose4 />
+    }
+    case 5: {
+      return <Nose5 />
+    }
+    case 6: {
+      return <Nose6 />
+    }
+    case 7: {
+      return <Nose7 />
+    }
+    case 8: {
+      return <Nose8 />
+    }
+    case 9: {
+      return <Nose9 />
+    }
+    case 10: {
+      return <Nose10 />
+    }
+    default: {
+      return <Nose0 />
+    }
+  }
 }
 
 export default Nose

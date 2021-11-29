@@ -13,21 +13,44 @@ import Detail9 from './9.jsx'
 import Detail10 from './10.jsx'
 
 const Detail = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Detail0 />}
-      {type === 1 && <Detail1 />}
-      {type === 2 && <Detail2 />}
-      {type === 3 && <Detail3 />}
-      {type === 4 && <Detail4 />}
-      {type === 5 && <Detail5 />}
-      {type === 6 && <Detail6 />}
-      {type === 7 && <Detail7 />}
-      {type === 8 && <Detail8 />}
-      {type === 9 && <Detail9 />}
-      {type === 10 && <Detail10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Detail0 />
+    }
+    case 1: {
+      return <Detail1 />
+    }
+    case 2: {
+      return <Detail2 />
+    }
+    case 3: {
+      return <Detail3 />
+    }
+    case 4: {
+      return <Detail4 />
+    }
+    case 5: {
+      return <Detail5 />
+    }
+    case 6: {
+      return <Detail6 />
+    }
+    case 7: {
+      return <Detail7 />
+    }
+    case 8: {
+      return <Detail8 />
+    }
+    case 9: {
+      return <Detail9 />
+    }
+    case 10: {
+      return <Detail10 />
+    }
+    default: {
+      return <Detail0 />
+    }
+  }
 }
 
 export default Detail

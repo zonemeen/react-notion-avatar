@@ -13,21 +13,44 @@ import Eyebrow9 from './9.jsx'
 import Eyebrow10 from './10.jsx'
 
 const Eyebrow = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Eyebrow0 />}
-      {type === 1 && <Eyebrow1 />}
-      {type === 2 && <Eyebrow2 />}
-      {type === 3 && <Eyebrow3 />}
-      {type === 4 && <Eyebrow4 />}
-      {type === 5 && <Eyebrow5 />}
-      {type === 6 && <Eyebrow6 />}
-      {type === 7 && <Eyebrow7 />}
-      {type === 8 && <Eyebrow8 />}
-      {type === 9 && <Eyebrow9 />}
-      {type === 10 && <Eyebrow10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Eyebrow0 />
+    }
+    case 1: {
+      return <Eyebrow1 />
+    }
+    case 2: {
+      return <Eyebrow2 />
+    }
+    case 3: {
+      return <Eyebrow3 />
+    }
+    case 4: {
+      return <Eyebrow4 />
+    }
+    case 5: {
+      return <Eyebrow5 />
+    }
+    case 6: {
+      return <Eyebrow6 />
+    }
+    case 7: {
+      return <Eyebrow7 />
+    }
+    case 8: {
+      return <Eyebrow8 />
+    }
+    case 9: {
+      return <Eyebrow9 />
+    }
+    case 10: {
+      return <Eyebrow10 />
+    }
+    default: {
+      return <Eyebrow0 />
+    }
+  }
 }
 
 export default Eyebrow

@@ -13,21 +13,44 @@ import Eye9 from './9.jsx'
 import Eye10 from './10.jsx'
 
 const Eye = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Eye0 />}
-      {type === 1 && <Eye1 />}
-      {type === 2 && <Eye2 />}
-      {type === 3 && <Eye3 />}
-      {type === 4 && <Eye4 />}
-      {type === 5 && <Eye5 />}
-      {type === 6 && <Eye6 />}
-      {type === 7 && <Eye7 />}
-      {type === 8 && <Eye8 />}
-      {type === 9 && <Eye9 />}
-      {type === 10 && <Eye10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Eye0 />
+    }
+    case 1: {
+      return <Eye1 />
+    }
+    case 2: {
+      return <Eye2 />
+    }
+    case 3: {
+      return <Eye3 />
+    }
+    case 4: {
+      return <Eye4 />
+    }
+    case 5: {
+      return <Eye5 />
+    }
+    case 6: {
+      return <Eye6 />
+    }
+    case 7: {
+      return <Eye7 />
+    }
+    case 8: {
+      return <Eye8 />
+    }
+    case 9: {
+      return <Eye9 />
+    }
+    case 10: {
+      return <Eye10 />
+    }
+    default: {
+      return <Eye0 />
+    }
+  }
 }
 
 export default Eye

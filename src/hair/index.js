@@ -33,41 +33,104 @@ import Hair29 from './29.jsx'
 import Hair30 from './30.jsx'
 
 const Hair = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Hair0 />}
-      {type === 1 && <Hair1 />}
-      {type === 2 && <Hair2 />}
-      {type === 3 && <Hair3 />}
-      {type === 4 && <Hair4 />}
-      {type === 5 && <Hair5 />}
-      {type === 6 && <Hair6 />}
-      {type === 7 && <Hair7 />}
-      {type === 8 && <Hair8 />}
-      {type === 9 && <Hair9 />}
-      {type === 10 && <Hair10 />}
-      {type === 11 && <Hair11 />}
-      {type === 12 && <Hair12 />}
-      {type === 13 && <Hair13 />}
-      {type === 14 && <Hair14 />}
-      {type === 15 && <Hair15 />}
-      {type === 16 && <Hair16 />}
-      {type === 17 && <Hair17 />}
-      {type === 18 && <Hair18 />}
-      {type === 19 && <Hair19 />}
-      {type === 20 && <Hair20 />}
-      {type === 21 && <Hair21 />}
-      {type === 22 && <Hair22 />}
-      {type === 23 && <Hair23 />}
-      {type === 24 && <Hair24 />}
-      {type === 25 && <Hair25 />}
-      {type === 26 && <Hair26 />}
-      {type === 27 && <Hair27 />}
-      {type === 28 && <Hair28 />}
-      {type === 29 && <Hair29 />}
-      {type === 30 && <Hair30 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Hair0 />
+    }
+    case 1: {
+      return <Hair1 />
+    }
+    case 2: {
+      return <Hair2 />
+    }
+    case 3: {
+      return <Hair3 />
+    }
+    case 4: {
+      return <Hair4 />
+    }
+    case 5: {
+      return <Hair5 />
+    }
+    case 6: {
+      return <Hair6 />
+    }
+    case 7: {
+      return <Hair7 />
+    }
+    case 8: {
+      return <Hair8 />
+    }
+    case 9: {
+      return <Hair9 />
+    }
+    case 10: {
+      return <Hair10 />
+    }
+    case 11: {
+      return <Hair11 />
+    }
+    case 12: {
+      return <Hair12 />
+    }
+    case 13: {
+      return <Hair13 />
+    }
+    case 14: {
+      return <Hair14 />
+    }
+    case 15: {
+      return <Hair15 />
+    }
+    case 16: {
+      return <Hair16 />
+    }
+    case 17: {
+      return <Hair17 />
+    }
+    case 18: {
+      return <Hair18 />
+    }
+    case 19: {
+      return <Hair19 />
+    }
+    case 20: {
+      return <Hair20 />
+    }
+    case 21: {
+      return <Hair21 />
+    }
+    case 22: {
+      return <Hair22 />
+    }
+    case 23: {
+      return <Hair23 />
+    }
+    case 24: {
+      return <Hair24 />
+    }
+    case 25: {
+      return <Hair25 />
+    }
+    case 26: {
+      return <Hair26 />
+    }
+    case 27: {
+      return <Hair27 />
+    }
+    case 28: {
+      return <Hair28 />
+    }
+    case 29: {
+      return <Hair29 />
+    }
+    case 30: {
+      return <Hair30 />
+    }
+    default: {
+      return <Hair0 />
+    }
+  }
 }
 
 export default Hair

@@ -13,21 +13,44 @@ import Mouth9 from './9.jsx'
 import Mouth10 from './10.jsx'
 
 const Mouth = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Mouth0 />}
-      {type === 1 && <Mouth1 />}
-      {type === 2 && <Mouth2 />}
-      {type === 3 && <Mouth3 />}
-      {type === 4 && <Mouth4 />}
-      {type === 5 && <Mouth5 />}
-      {type === 6 && <Mouth6 />}
-      {type === 7 && <Mouth7 />}
-      {type === 8 && <Mouth8 />}
-      {type === 9 && <Mouth9 />}
-      {type === 10 && <Mouth10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Mouth0 />
+    }
+    case 1: {
+      return <Mouth1 />
+    }
+    case 2: {
+      return <Mouth2 />
+    }
+    case 3: {
+      return <Mouth3 />
+    }
+    case 4: {
+      return <Mouth4 />
+    }
+    case 5: {
+      return <Mouth5 />
+    }
+    case 6: {
+      return <Mouth6 />
+    }
+    case 7: {
+      return <Mouth7 />
+    }
+    case 8: {
+      return <Mouth8 />
+    }
+    case 9: {
+      return <Mouth9 />
+    }
+    case 10: {
+      return <Mouth10 />
+    }
+    default: {
+      return <Mouth0 />
+    }
+  }
 }
 
 export default Mouth

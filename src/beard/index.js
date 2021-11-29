@@ -13,21 +13,44 @@ import Beard9 from './9.jsx'
 import Beard10 from './10.jsx'
 
 const Beard = ({ type }) => {
-  return (
-    <>
-      {type === 0 && <Beard0 />}
-      {type === 1 && <Beard1 />}
-      {type === 2 && <Beard2 />}
-      {type === 3 && <Beard3 />}
-      {type === 4 && <Beard4 />}
-      {type === 5 && <Beard5 />}
-      {type === 6 && <Beard6 />}
-      {type === 7 && <Beard7 />}
-      {type === 8 && <Beard8 />}
-      {type === 9 && <Beard9 />}
-      {type === 10 && <Beard10 />}
-    </>
-  )
+  switch (type) {
+    case 0: {
+      return <Beard0 />
+    }
+    case 1: {
+      return <Beard1 />
+    }
+    case 2: {
+      return <Beard2 />
+    }
+    case 3: {
+      return <Beard3 />
+    }
+    case 4: {
+      return <Beard4 />
+    }
+    case 5: {
+      return <Beard5 />
+    }
+    case 6: {
+      return <Beard6 />
+    }
+    case 7: {
+      return <Beard7 />
+    }
+    case 8: {
+      return <Beard8 />
+    }
+    case 9: {
+      return <Beard9 />
+    }
+    case 10: {
+      return <Beard10 />
+    }
+    default: {
+      return <Beard0 />
+    }
+  }
 }
 
 export default Beard
