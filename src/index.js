@@ -42,34 +42,34 @@ const NotionAvatar = (props) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <Face type={Number(realConfig.face)} />
-        <Eye type={Number(realConfig.eye)} />
-        <Eyebrow type={Number(realConfig.eyebrow)} />
-        <Glass type={Number(realConfig.glass)} />
-        <Hair type={Number(realConfig.hair)} />
-        <Mouth type={Number(realConfig.mouth)} />
-        <Nose type={Number(realConfig.nose)} />
-        <Accessory type={Number(realConfig.accessory)} />
-        <Beard type={Number(realConfig.beard)} />
-        <Detail type={Number(realConfig.detail)} />
+        <Face type={parseInt(realConfig.face)} />
+        <Eye type={parseInt(realConfig.eye)} />
+        <Eyebrow type={parseInt(realConfig.eyebrow)} />
+        <Glass type={parseInt(realConfig.glass)} />
+        <Hair type={parseInt(realConfig.hair)} />
+        <Mouth type={parseInt(realConfig.mouth)} />
+        <Nose type={parseInt(realConfig.nose)} />
+        <Accessory type={parseInt(realConfig.accessory)} />
+        <Beard type={parseInt(realConfig.beard)} />
+        <Detail type={parseInt(realConfig.detail)} />
       </svg>
     </div>
   )
 }
 
-const { number, string, oneOfType } = PropTypes
+const { number } = PropTypes
 
 NotionAvatar.propTypes = {
-  accessory: oneOfType([string, number]),
-  beard: oneOfType([string, number]),
-  detail: oneOfType([string, number]),
-  eye: oneOfType([string, number]),
-  eyebrow: oneOfType([string, number]),
-  face: oneOfType([string, number]),
-  glass: oneOfType([string, number]),
-  hair: oneOfType([string, number]),
-  mouth: oneOfType([string, number]),
-  nose: oneOfType([string, number]),
+  accessory: number,
+  beard: number,
+  detail: number,
+  eye: number,
+  eyebrow: number,
+  face: number,
+  glass: number,
+  hair: number,
+  mouth: number,
+  nose: number,
 }
 
 export default NotionAvatar
