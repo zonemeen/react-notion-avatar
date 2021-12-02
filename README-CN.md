@@ -2,15 +2,15 @@
     <h1>React Notion Avatar</h1>
     <img src="https://cdn.jsdelivr.net/gh/miqilin21/static@master/img/example.gif" alt="imagewall" />
 
-[简体中文](./README-CN.md)
+[Read In English](./README.md)
 </div>
 
-## Assets
+## 设计资源
 
-- Designer: [@Felix Wong](https://www.producthunt.com/@felix12777) on ProductHunt
-- Pack of illustrations: [Noto avatar](https://abstractlab.gumroad.com/l/noto-avatar)
+- 设计师: [@Felix Wong](https://www.producthunt.com/@felix12777) on ProductHunt
+- 素材来源: [Noto avatar](https://abstractlab.gumroad.com/l/noto-avatar)
 
-## Installation
+## 安装
 
 ```sh
 npm install react-notion-avatar
@@ -22,13 +22,13 @@ or
 yarn add react-notion-avatar
 ```
 
-## Usage
+## 使用
 
-1. Import the component.
+1. 导入该组件。
     ```js
     import NotionAvatar from 'react-notion-avatar'
     ```
-2. Set the config attribute, so that you can always rendering a same avatar with the configuration.
+2. 设置config属性，这样你就可以固定用这个配置渲染同一个头像。
     ```js
     const config = {
         eye: 3,
@@ -44,11 +44,11 @@ yarn add react-notion-avatar
     }
     ```
     
-    `tip`: config is an Object, please check the **Attributes** below for what attributes can be passed in.
+    `提示`: `config` 是一个对象，请查看下面的**属性**，了解有哪些属性可以被传入。
     
-    `Note`: If you don't set the config attribute, component will generate a random avatar.
+    `注意`: 如果你不设置 `config` 属性，组件将生成一个随机头像。
 
-3. Render the component with specific width / height and configuration.
+3. 以特定的宽度/高度和配置来渲染组件。
     ```jsx
     <NotionAvatar style={{ width: '6rem', height: '6rem' }} config={config} />
     ```
@@ -62,9 +62,9 @@ yarn add react-notion-avatar
     <NotionAvatar />
      ```
 
-## Attributes
+## 属性
 
-The Attributes can be passed into config
+以下这些属性可以被写入 `config` 中：
 
 | key               | type    | default | accept    |
 | ----------------- | ------- | ------- | --------- | 
@@ -79,7 +79,7 @@ The Attributes can be passed into config
 | `beard`           | number  |   0     |  0~10     |                                    
 | `detail`          | number  |   0     |  0~10     |                                    
 
-or as React props
+或作为 `React props` 属性传入：
 
 | key               | type    | tips                               |
 | ----------------- | ------- | ---------------------------------- |
@@ -87,14 +87,14 @@ or as React props
 | `className`       | string  | Only for React Props               |
 | `style`           | object  | Only for React Props               |
 
-## Development
+## 项目开发
 
-1. Clone the repo:
+1. 克隆项目至本地：
     ```sh
     $ git clone git@github.com:miqilin21/react-notion-avatar.git
     $ cd react-notion-avatar
     ```
-2. Install dependencies:
+2. 安装项目依赖：
     ```sh
     $ yarn
     ```
@@ -102,7 +102,7 @@ or as React props
     ```sh
     $ npm install
     ```
-3. Start the server for the example:
+3. 运行项目：
     ```sh
     $ yarn dev
     ```
@@ -110,12 +110,12 @@ or as React props
     ```sh
     $ npm run dev
     ```
-4. Open the browser to reivew the example:
+4. 打开浏览器预览：
     ```sh
     $ open http://localhost:8080
     ```
-5. Edit the files inside [src](/src).
+5. 编辑 [src](/src) 里面的文件。
 
-## License
+## 许可证
 
-Released under [MIT](/LICENSE) by [@miqilin21](https://github.com/miqilin21).
+由[@miqilin21](https://github.com/miqilin21)发布的基于[MIT](/LICENSE)协议许可证。
