@@ -52,12 +52,12 @@ yarn add react-notion-avatar
     ```jsx
     <NotionAvatar style={{ width: '6rem', height: '6rem' }} config={config} />
     ```
-    or
+    或
     
     ```jsx
     <NotionAvatar className="className" config={config} />
     ```
-    or
+    或
      ```jsx
     <NotionAvatar />
      ```
@@ -98,7 +98,7 @@ yarn add react-notion-avatar
     ```sh
     $ yarn
     ```
-    Or
+    或
     ```sh
     $ npm install
     ```
@@ -106,7 +106,7 @@ yarn add react-notion-avatar
     ```sh
     $ yarn dev
     ```
-    Or
+    或
     ```sh
     $ npm run dev
     ```

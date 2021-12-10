@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+  Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC,
+  Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  background-color: #fffefc;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tooltip {
+  @apply cursor-pointer relative;
+}
+
+.tooltip:before {
+  @apply absolute w-max py-1 px-2 bg-black text-white
+  max-w-xs text-sm rounded pointer-events-none transform-gpu
+  translate-y-3 transition opacity-0 capitalize;
+  bottom: 120%;
+  content: attr(data-tip);
+}
+
+.tooltip:hover:before {
+  @apply transform-gpu translate-y-0 opacity-100;
+}

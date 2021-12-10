@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
+import { ShapeBorderRadius } from './const'
+import { getConfig } from './utils'
 import Accessory from './accessory'
 import Beard from './beard'
 import Detail from './detail'
@@ -12,64 +12,50 @@ import Hair from './hair'
 import Mouth from './mouth'
 import Nose from './nose'
 
-const getRandomNumber = (number) => {
-  return Math.floor(Math.random() * (number + 1))
-}
-
-const getConfig = (userConfig = {}) => {
-  const config = {}
-
-  config.accessory = userConfig.accessory || 0
-  config.beard = userConfig.beard || 0
-  config.detail = userConfig.detail || 0
-  config.eye = userConfig.eye || getRandomNumber(10)
-  config.eyebrow = userConfig.eyebrow || getRandomNumber(10)
-  config.face = userConfig.face || getRandomNumber(10)
-  config.glass = userConfig.glass || getRandomNumber(10)
-  config.hair = userConfig.hair || getRandomNumber(30)
-  config.mouth = userConfig.mouth || getRandomNumber(10)
-  config.nose = userConfig.nose || getRandomNumber(10)
-
-  return config
-}
-
 const NotionAvatar = (props) => {
-  const realConfig = getConfig(props.config)
+  const { className, style, shape, bgColor, config } = props
+  const {
+    face,
+    eye,
+    eyebrow,
+    glass,
+    hair,
+    mouth,
+    nose,
+    accessory,
+    beard,
+    detail,
+  } = getConfig(config)
+  const borderRadius = ShapeBorderRadius[shape]
   return (
-    <div {...props}>
+    <div
+      className={className}
+      style={{
+        backgroundColor:
+          shape in ShapeBorderRadius ? bgColor : 'rgba(255, 0, 0, 0)',
+        overflow: 'hidden',
+        borderRadius,
+        ...style,
+      }}
+    >
       <svg
         viewBox="0 0 1080 1080"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <Face type={parseInt(realConfig.face)} />
-        <Eye type={parseInt(realConfig.eye)} />
-        <Eyebrow type={parseInt(realConfig.eyebrow)} />
-        <Glass type={parseInt(realConfig.glass)} />
-        <Hair type={parseInt(realConfig.hair)} />
-        <Mouth type={parseInt(realConfig.mouth)} />
-        <Nose type={parseInt(realConfig.nose)} />
-        <Accessory type={parseInt(realConfig.accessory)} />
-        <Beard type={parseInt(realConfig.beard)} />
-        <Detail type={parseInt(realConfig.detail)} />
+        <Face type={parseInt(face)} />
+        <Eye type={parseInt(eye)} />
+        <Eyebrow type={parseInt(eyebrow)} />
+        <Glass type={parseInt(glass)} />
+        <Hair type={parseInt(hair)} />
+        <Mouth type={parseInt(mouth)} />
+        <Nose type={parseInt(nose)} />
+        <Accessory type={parseInt(accessory)} />
+        <Beard type={parseInt(beard)} />
+        <Detail type={parseInt(detail)} />
       </svg>
     </div>
   )
-}
-
-const { number } = PropTypes
-
-NotionAvatar.propTypes = {
-  accessory: number,
-  beard: number,
-  detail: number,
-  eye: number,
-  eyebrow: number,
-  face: number,
-  glass: number,
-  hair: number,
-  mouth: number,
-  nose: number,
 }
 
 export default NotionAvatar
