@@ -1,6 +1,6 @@
 <div align="center">
     <h1>React Notion Avatar</h1>
-    <img src="https://cdn.jsdelivr.net/gh/miqilin21/static@master/img/example.gif" alt="imagewall" />
+    <img src="https://cdn.jsdelivr.net/gh/zonemeen/static@master/img/example.gif" alt="imagewall" />
 
 [简体中文](./README-CN.md)
 </div>
@@ -91,7 +91,7 @@ or as React props
 
 1. Clone the repo:
     ```sh
-    $ git clone git@github.com:miqilin21/react-notion-avatar.git
+    $ git clone git@github.com:zonemeen/react-notion-avatar.git
     $ cd react-notion-avatar
     ```
 2. Install dependencies:
@@ -118,4 +118,4 @@ or as React props
 
 ## License
 
-Released under [MIT](/LICENSE) by [@miqilin21](https://github.com/miqilin21).
+Released under [MIT](/LICENSE) by [@zonemeen](https://github.com/zonemeen).
