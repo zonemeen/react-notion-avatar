@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const baseConfig = require('./webpack.base.config')
@@ -11,14 +12,23 @@ module.exports = merge(baseConfig, {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
     unsafeCache: true,
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, '../example/tsconfig.json'),
+      }),
+    ],
+    alias: {
+      'react-notion-avatar': path.resolve(__dirname, '../src'),
+      'shared-style': path.resolve(__dirname, '../example/src/scss'),
+    },
   },
   entry: {
     app:
       process.env.NODE_ENV === 'production'
-        ? path.resolve(__dirname, '../example/src/index.js')
+        ? path.resolve(__dirname, '../example/src/index.tsx')
         : [
             'react-hot-loader/patch',
-            path.resolve(__dirname, '../example/src/index.js'),
+            path.resolve(__dirname, '../example/src/index.tsx'),
           ],
   },
   output: {

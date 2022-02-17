@@ -1,0 +1,6 @@
+dist/
+example/dist
+webpack/
+jest.config.js
+.eslintrc.js
+tailwind.config.js
