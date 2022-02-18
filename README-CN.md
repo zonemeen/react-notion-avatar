@@ -26,9 +26,9 @@ yarn add react-notion-avatar
 
 1. 导入该组件。
     ```js
-    import NotionAvatar from 'react-notion-avatar'
+    import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
     ```
-2. 设置config属性，这样你就可以固定用这个配置渲染同一个头像。
+2. 必须设置config属性，这样你就可以固定用这个配置渲染同一个头像。
     ```js
     const config = {
         eye: 3,
@@ -43,24 +43,23 @@ yarn add react-notion-avatar
         detail: 0,
     }
     ```
+    或随机生成config
+
+    ```js
+    const config = getRandomConfig()
+    ```
     
     `提示`: `config` 是一个对象，请查看下面的**属性**，了解有哪些属性可以被传入。
     
-    `注意`: 如果你不设置 `config` 属性，组件将生成一个随机头像。
-
 3. 以特定的宽度/高度和配置来渲染组件。
-    ```jsx
+   ```jsx
     <NotionAvatar style={{ width: '6rem', height: '6rem' }} config={config} />
     ```
-    或
+    or
     
     ```jsx
-    <NotionAvatar className="className" config={config} />
+    <NotionAvatar className='className' bgColor='#debaba' shape='square' config={config} />
     ```
-    或
-     ```jsx
-    <NotionAvatar />
-     ```
 
 ## 属性
 
@@ -81,12 +80,12 @@ yarn add react-notion-avatar
 
 或作为 `React props` 属性传入：
 
-| key               | type    | default  | tips                              |
-| ----------------- | ------- | -------- |---------------------------------- |
-| `className`       | string  |          | Only for React Props              |
-| `style`           | object  |          | Only for React Props              |
-| `shape`           | string  | 'circle' | Only for React Props              |
-| `bgColor`         | string  |          | Only for React Props              |
+| key               | type    | default  | options                              | tips                              |
+| ----------------- | ------- | -------- | ------------------------------------ |---------------------------------- |
+| `className`       | string  |          |                                      | Only for React Props              |
+| `style`           | object  |          |                                      | Only for React Props              |
+| `shape`           | string  | 'circle' | 'circle' , 'rounded' , 'square'      | Only for React Props              |
+| `bgColor`         | string  |          | Hexadecimal , RGB , HSL , Predefined | Only for React Props              |
 
 ## 项目开发
 

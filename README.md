@@ -1,6 +1,6 @@
 <div align="center">
     <h1>React Notion Avatar</h1>
-    <img src="https://cdn.jsdelivr.net/gh/zonemeen/static@master/img/example.gif" alt="imagewall" />
+    <img src='https://cdn.jsdelivr.net/gh/zonemeen/static@master/img/example.gif' alt='imagewall' />
 
 [简体中文](./README-CN.md)
 </div>
@@ -26,9 +26,9 @@ yarn add react-notion-avatar
 
 1. Import the component.
     ```js
-    import NotionAvatar from 'react-notion-avatar'
+    import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
     ```
-2. Set the config attribute, so that you can always rendering a same avatar with the configuration.
+2. Set the required config attribute, so that you can always rendering a same avatar with the configuration.
     ```js
     const config = {
         eye: 3,
@@ -43,10 +43,13 @@ yarn add react-notion-avatar
         detail: 0,
     }
     ```
+    or generate a random config
+
+    ```js
+    const config = getRandomConfig()
+    ```
     
     `tip`: config is an Object, please check the **Attributes** below for what attributes can be passed in.
-    
-    `Note`: If you don't set the config attribute, component will generate a random avatar.
 
 3. Render the component with specific width / height and configuration.
     ```jsx
@@ -55,12 +58,8 @@ yarn add react-notion-avatar
     or
     
     ```jsx
-    <NotionAvatar className="className" config={config} />
+    <NotionAvatar className='className' bgColor='#debaba' shape='square' config={config} />
     ```
-    or
-     ```jsx
-    <NotionAvatar />
-     ```
 
 ## Attributes
 
@@ -81,12 +80,12 @@ The Attributes can be passed into config
 
 or as React props
 
-| key               | type    | default  | tips                              |
-| ----------------- | ------- | -------- |---------------------------------- |
-| `className`       | string  |          | Only for React Props              |
-| `style`           | object  |          | Only for React Props              |
-| `shape`           | string  | 'circle' | Only for React Props              |
-| `bgColor`         | string  |          | Only for React Props              |
+| key               | type    | default  | options                              | tips                              |
+| ----------------- | ------- | -------- | ------------------------------------ |---------------------------------- |
+| `className`       | string  |          |                                      | Only for React Props              |
+| `style`           | object  |          |                                      | Only for React Props              |
+| `shape`           | string  | 'circle' | 'circle' , 'rounded' , 'square'      | Only for React Props              |
+| `bgColor`         | string  |          | Hexadecimal , RGB , HSL , Predefined | Only for React Props              |
 
 ## Development
 
