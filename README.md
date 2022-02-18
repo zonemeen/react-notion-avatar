@@ -81,11 +81,12 @@ The Attributes can be passed into config
 
 or as React props
 
-| key               | type    | tips                               |
-| ----------------- | ------- | ---------------------------------- |
-| `id`              | string  | Only for React Props               |
-| `className`       | string  | Only for React Props               |
-| `style`           | object  | Only for React Props               |
+| key               | type    | default  | tips                              |
+| ----------------- | ------- | -------- |---------------------------------- |
+| `className`       | string  |          | Only for React Props              |
+| `style`           | object  |          | Only for React Props              |
+| `shape`           | string  | 'circle' | Only for React Props              |
+| `bgColor`         | string  |          | Only for React Props              |
 
 ## Development
 

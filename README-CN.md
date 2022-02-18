@@ -81,11 +81,12 @@ yarn add react-notion-avatar
 
 或作为 `React props` 属性传入：
 
-| key               | type    | tips                               |
-| ----------------- | ------- | ---------------------------------- |
-| `id`              | string  | Only for React Props               |
-| `className`       | string  | Only for React Props               |
-| `style`           | object  | Only for React Props               |
+| key               | type    | default  | tips                              |
+| ----------------- | ------- | -------- |---------------------------------- |
+| `className`       | string  |          | Only for React Props              |
+| `style`           | object  |          | Only for React Props              |
+| `shape`           | string  | 'circle' | Only for React Props              |
+| `bgColor`         | string  |          | Only for React Props              |
 
 ## 项目开发
 
