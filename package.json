@@ -1,12 +1,12 @@
 {
   "name": "react-notion-avatar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react library for generating notion-style avatar",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "npx webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
-    "build": "rm -rf ./dist && npx webpack --config ./scripts/webpack.prod.config.js --progress --bail",
+    "build": "rm -rf ./dist && npx webpack --config ./scripts/webpack.prod.config.js --progress --bail && cp src/types.ts dist/index.d.ts",
     "prepublishOnly": "yarn build",
     "release": "npx bumpp --commit --tag --push && npm publish"
   },

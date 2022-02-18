@@ -1,6 +1,5 @@
 import React from 'react'
 import { ShapeBorderRadius } from './const'
-import { getConfig } from './utils'
 import Accessory from './accessory/index'
 import Beard from './beard/index'
 import Detail from './detail/index'
@@ -11,7 +10,7 @@ import Glass from './glass/index'
 import Hair from './hair/index'
 import Mouth from './mouth/index'
 import Nose from './nose/index'
-import { NotionAvatarProps } from './types'
+import { NotionAvatarProps, AvatarConfig } from './types'
 
 const NotionAvatar = (props: NotionAvatarProps) => {
   const { className, style, shape = 'circle', bgColor, config } = props
@@ -26,7 +25,7 @@ const NotionAvatar = (props: NotionAvatarProps) => {
     accessory = 0,
     beard = 0,
     detail = 0,
-  } = getConfig(config)
+  } = config as AvatarConfig
   const borderRadius = ShapeBorderRadius[shape]
   return (
     <div
@@ -60,3 +59,5 @@ const NotionAvatar = (props: NotionAvatarProps) => {
 }
 
 export default NotionAvatar
+
+export { getRandomConfig } from './utils'

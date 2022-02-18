@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 type Style = {
   [key: string]: string | number | boolean
 }
@@ -28,3 +30,5 @@ export interface NotionAvatarProps {
   bgColor?: string
   config?: AvatarConfig
 }
+
+export type AvatarPart = keyof AvatarConfig
