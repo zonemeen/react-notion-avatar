@@ -23,9 +23,9 @@ const NotionAvatar = (props: NotionAvatarProps) => {
     hair,
     mouth,
     nose,
-    accessory,
-    beard,
-    detail,
+    accessory = 0,
+    beard = 0,
+    detail = 0,
   } = getConfig(config)
   const borderRadius = ShapeBorderRadius[shape]
   return (
