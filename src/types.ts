@@ -23,10 +23,12 @@ export interface BackgroundShape {
   square?: number
 }
 
+export type ShapeTypes = 'circle' | 'rounded' | 'square'
+
 export interface NotionAvatarProps {
   className?: string
   style?: Style
-  shape?: 'circle' | 'rounded' | 'square'
+  shape?: ShapeTypes
   bgColor?: string
   config?: AvatarConfig
 }

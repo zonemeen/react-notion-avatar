@@ -1,6 +1,6 @@
 {
   "name": "react-notion-avatar",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "react library for generating notion-style avatar",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -73,7 +73,8 @@
     "react": "^17.0.2",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.12.15",
+    "react-hot-loader": "^4.13.0",
+    "react-notion-avatar": "^1.0.5",
     "sass": "^1.38.0",
     "sass-loader": "^10.2.0",
     "standard-version": "^9.3.1",
