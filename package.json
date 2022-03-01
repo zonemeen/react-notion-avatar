@@ -8,7 +8,7 @@
     "dev": "npx webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
     "build": "rm -rf ./dist && npx webpack --config ./scripts/webpack.prod.config.js --progress --bail && cp src/types.ts dist/index.d.ts",
     "prepublishOnly": "yarn build",
-    "release": "npx bumpp --commit --tag --push && npm publish"
+    "release": "bumpp --commit --push --tag && npm publish"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
     "@typescript-eslint/parser": "^4.31.2",
     "autoprefixer": "^10.3.1",
     "babel-loader": "^8.2.2",
+    "bumpp": "^7.1.1",
     "classnames": "^2.3.1",
     "css-loader": "^3.2.0",
     "dom-to-image": "^2.6.0",
