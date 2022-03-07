@@ -51,7 +51,7 @@ module.exports = merge(baseConfig, {
     }),
     new HtmlWebpackPlugin({
       title: 'web',
-      template: path.resolve(__dirname, '../example/index.html'),
+      template: path.resolve(__dirname, '../example/public/index.html'),
     }),
     new MiniCssExtractPlugin({
       ignoreOrder: true,
