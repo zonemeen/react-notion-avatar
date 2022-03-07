@@ -2,7 +2,7 @@ import { AvatarConfigCount } from './const'
 import { AvatarConfig, AvatarPart } from './types'
 
 export const getRandomConfig = (): AvatarConfig => {
-  return Object.keys(AvatarConfigCount).reduce(
+  const randomConfig = Object.keys(AvatarConfigCount).reduce(
     (prev, next) =>
       Object.assign(prev, {
         [next]: Math.floor(
@@ -11,4 +11,8 @@ export const getRandomConfig = (): AvatarConfig => {
       }),
     {} as Record<keyof AvatarConfig, number>
   )
+  randomConfig.detail = 0
+  randomConfig.accessory = 0
+  randomConfig.beard = 0
+  return randomConfig
 }

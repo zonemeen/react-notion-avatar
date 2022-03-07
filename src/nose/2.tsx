@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nose2 = (): React.ReactElement => {
+const Nose2 = () => {
   return (
     <g
       id="Nose/-2"

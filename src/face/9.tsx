@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Face9 = (): React.ReactElement => {
+const Face9 = () => {
   return (
     <g
       id="Face/-9"

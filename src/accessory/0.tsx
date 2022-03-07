@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Accessory0 = (): React.ReactElement => {
+const Accessory0 = () => {
   return (
     <g
       id="Accessories/-0"

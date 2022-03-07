@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Eyebrow9 = (): React.ReactElement => {
+const Eyebrow9 = () => {
   return (
     <g
       id="Eyebrows/-9"

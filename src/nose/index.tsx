@@ -12,7 +12,7 @@ import Nose8 from './8'
 import Nose9 from './9'
 import Nose10 from './10'
 
-const Nose = (props: { type: number }): React.ReactElement => {
+const Nose = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

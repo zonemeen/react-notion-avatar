@@ -12,7 +12,7 @@ import Detail8 from './8'
 import Detail9 from './9'
 import Detail10 from './10'
 
-const Detail = (props: { type: number }): React.ReactElement => {
+const Detail = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

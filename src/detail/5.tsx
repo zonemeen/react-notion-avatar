@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Detail5 = (): React.ReactElement => {
+const Detail5 = () => {
   return (
     <g
       id="Details/-5"

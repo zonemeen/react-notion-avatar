@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hair3 = (): React.ReactElement => {
+const Hair3 = () => {
   return (
     <g
       id="Hairstyle/-3"

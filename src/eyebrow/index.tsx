@@ -12,7 +12,7 @@ import Eyebrow8 from './8'
 import Eyebrow9 from './9'
 import Eyebrow10 from './10'
 
-const Eyebrow = (props: { type: number }): React.ReactElement => {
+const Eyebrow = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

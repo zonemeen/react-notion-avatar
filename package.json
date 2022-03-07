@@ -43,6 +43,7 @@
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.14.5",
+    "@types/dom-to-image": "^2.6.4",
     "@types/file-saver": "^2.0.3",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",

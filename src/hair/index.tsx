@@ -32,7 +32,7 @@ import Hair28 from './28'
 import Hair29 from './29'
 import Hair30 from './30'
 
-const Hair = (props: { type: number }): React.ReactElement => {
+const Hair = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

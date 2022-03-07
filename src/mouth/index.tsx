@@ -12,7 +12,7 @@ import Mouth8 from './8'
 import Mouth9 from './9'
 import Mouth10 from './10'
 
-const Mouth = (props: { type: number }): React.ReactElement => {
+const Mouth = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

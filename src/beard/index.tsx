@@ -12,7 +12,7 @@ import Beard8 from './8'
 import Beard9 from './9'
 import Beard10 from './10'
 
-const Beard = (props: { type: number }): React.ReactElement => {
+const Beard = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

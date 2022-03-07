@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Glass0 = (): React.ReactElement => {
+const Glass0 = () => {
   return (
     <g
       id="Glasses/-0"

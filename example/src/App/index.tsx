@@ -7,23 +7,23 @@ import NotionAvatar, { getRandomConfig } from '../../../src/index'
 import { AvatarPart, ShapeTypes } from '../types'
 
 import AvatarEditor from './AvatarEditor/index'
-import AvatarList from './AvatarList/index'
 import Footer from './Footer/index'
 
 require('./index.scss')
 
 const App = () => {
   const [config, setConfig] = useState({ ...getRandomConfig() })
+  console.log('config', config)
   const [shape, setShape] = useState('circle' as ShapeTypes)
-  const [bgColor, setBgColor] = useState('rgba(255, 0, 0, 0)')
-  const updateConfig = (key, value) => {
+  const [bgColor, setBgColor] = useState('#ffffff')
+  const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
   }
-  const updateShape = (shape) => {
+  const updateShape = (shape: ShapeTypes) => {
     setShape(shape)
   }
-  const updateBgColor = (color) => {
+  const updateBgColor = (color: string) => {
     setBgColor(color)
   }
   const download = async () => {
@@ -40,12 +40,8 @@ const App = () => {
         },
         width: node.offsetWidth * scale,
       })
-
       saveAs(blob, 'avatar.png')
     }
-  }
-  const selectConfig = (config) => {
-    setConfig({ ...config })
   }
   return (
     <div className="App flex flex-col min-h-screen">
@@ -55,7 +51,7 @@ const App = () => {
             className="w-64 h-64 highres:w-80 highres:h-80"
             shape={shape}
             bgColor={bgColor}
-            {...config}
+            config={config}
           />
         </div>
         <AvatarEditor
@@ -63,16 +59,12 @@ const App = () => {
           shape={shape}
           updateConfig={updateConfig}
           updateShape={updateShape}
-          updateBgColor={updateBgColor}
           download={download}
         />
       </main>
 
-      {/* Avatar list */}
-      <AvatarList selectConfig={selectConfig} />
-
       {/* Footer */}
-      {/*<Footer />*/}
+      <Footer />
     </div>
   )
 }

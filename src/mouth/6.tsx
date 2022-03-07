@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Mouth6 = (): React.ReactElement => {
+const Mouth6 = () => {
   return (
     <g
       id="Mouth/-6"

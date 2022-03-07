@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function footer(): HTMLElement {
-  // @ts-ignore
+export default function footer() {
   return (
     <footer className="flex items-center justify-center text-gray-400 text-sm pb-5">
       <a

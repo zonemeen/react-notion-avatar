@@ -12,7 +12,7 @@ import Face8 from './8'
 import Face9 from './9'
 import Face10 from './10'
 
-const Face = (props: { type: number }): React.ReactElement => {
+const Face = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

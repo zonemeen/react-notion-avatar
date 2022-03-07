@@ -12,7 +12,7 @@ import Glass8 from './8'
 import Glass9 from './9'
 import Glass10 from './10'
 
-const Glass = (props: { type: number }): React.ReactElement => {
+const Glass = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

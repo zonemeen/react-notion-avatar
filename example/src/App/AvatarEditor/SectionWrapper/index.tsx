@@ -5,10 +5,12 @@ import './index.scss'
 export default function sectionWrapper(props: {
   className?: string
   children: JSX.Element
-  switchConfig: () => void
+  switchConfig?: () => void
   tip: string
-}): React.ReactElement {
-  const { className = '', children, switchConfig, tip } = props
+  isSvgElement?: boolean
+}) {
+  const { className = '', children, switchConfig, tip, isSvgElement } = props
+  console.log('isSvgElement', isSvgElement)
   return (
     <div
       className={'SectionWrapper ' + className}
@@ -17,7 +19,17 @@ export default function sectionWrapper(props: {
     >
       <div className="relative w-full h-full">
         <div className="childrenWrapper absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          {children}
+          {isSvgElement ? (
+            <svg
+              viewBox="0 0 1080 1080"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {children}
+            </svg>
+          ) : (
+            <div>{children}</div>
+          )}
         </div>
       </div>
     </div>

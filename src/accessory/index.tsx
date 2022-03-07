@@ -12,7 +12,7 @@ import Accessory8 from './8'
 import Accessory9 from './9'
 import Accessory10 from './10'
 
-const Accessory = (props: { type: number }): React.ReactElement => {
+const Accessory = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

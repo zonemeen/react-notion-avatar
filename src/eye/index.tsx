@@ -12,7 +12,7 @@ import Eye8 from './8'
 import Eye9 from './9'
 import Eye10 from './10'
 
-const Eye = (props: { type: number }): React.ReactElement => {
+const Eye = (props: { type: number }) => {
   const { type } = props
   switch (type) {
     case 0: {

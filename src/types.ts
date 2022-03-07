@@ -17,12 +17,6 @@ export interface AvatarConfig {
   detail: number
 }
 
-export interface BackgroundShape {
-  circle?: string
-  rounded?: string
-  square?: number
-}
-
 export type ShapeTypes = 'circle' | 'rounded' | 'square'
 
 export interface NotionAvatarProps {
@@ -30,7 +24,7 @@ export interface NotionAvatarProps {
   style?: Style
   shape?: ShapeTypes
   bgColor?: string
-  config?: AvatarConfig
+  config: AvatarConfig
 }
 
 export type AvatarPart = keyof AvatarConfig

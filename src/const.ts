@@ -1,4 +1,4 @@
-import { AvatarConfig, BackgroundShape } from './types'
+import { AvatarConfig } from './types'
 
 export const AvatarConfigCount: AvatarConfig = {
   face: 10,
@@ -13,7 +13,7 @@ export const AvatarConfigCount: AvatarConfig = {
   beard: 10,
 }
 
-export const ShapeBorderRadius: BackgroundShape = {
+export const ShapeBorderRadius = {
   circle: '100%',
   rounded: '6px',
   square: 0,

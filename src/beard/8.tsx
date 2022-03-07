@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Beard8 = (): React.ReactElement => {
+const Beard8 = () => {
   return (
     <g
       id="Beard/-8"
