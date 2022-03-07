@@ -3,8 +3,8 @@ import { hot } from 'react-hot-loader'
 import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
 
-import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
-import type { AvatarPart, ShapeTypes } from 'react-notion-avatar'
+import NotionAvatar, { getRandomConfig } from '../../../dist/index.mjs'
+import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 
 import AvatarEditor from './AvatarEditor/index'
 import Footer from './Footer/index'
@@ -12,8 +12,9 @@ import Footer from './Footer/index'
 require('./index.scss')
 
 const App = () => {
-  const [config, setConfig] = useState({ ...getRandomConfig() })
-  console.log('config', config)
+  const [config, setConfig] = useState({
+    ...(getRandomConfig() as AvatarConfig),
+  })
   const [shape, setShape] = useState('circle' as ShapeTypes)
   const [bgColor, setBgColor] = useState('#ffffff')
   const updateConfig = (key: AvatarPart, value: number) => {
@@ -40,7 +41,7 @@ const App = () => {
         },
         width: node.offsetWidth * scale,
       })
-      saveAs(blob, 'avatar.png')
+      saveAs(blob, 'notion-avatar.png')
     }
   }
   return (
