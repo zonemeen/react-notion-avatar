@@ -7947,10 +7947,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npmmirror.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-notion-avatar@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-notion-avatar/-/react-notion-avatar-1.1.0.tgz#3a3627aefe127caefabc38fc90f374be60e547a6"
-  integrity sha512-SBbenuyJxn4P6J4HpKGSDo8aTgkrrQlV4oYfpBPRnSgXSEXeVhHZVn8J9wP/K0gf36t3mFPC3ij421UY2d6RUQ==
+react-notion-avatar@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-notion-avatar/-/react-notion-avatar-1.1.1.tgz#29236edc6150311f7a0693249d0dc38e87f8211e"
+  integrity sha512-3GVdSUt81ZkUnDeS1c1JiDWxj0yVXlCaym1SVOjFbd7/l2cdbyz8hhuZ1Md6hPp3Cy+RorB26LPlORr+ofmM0g==
 
 react@^17.0.2:
   version "17.0.2"
