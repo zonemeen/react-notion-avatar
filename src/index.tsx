@@ -58,6 +58,6 @@ const NotionAvatar = (props: NotionAvatarProps) => {
   )
 }
 
-export default NotionAvatar
+export { NotionAvatar }
 
 export { getRandomConfig } from './utils'

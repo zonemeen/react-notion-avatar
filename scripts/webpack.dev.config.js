@@ -14,32 +14,32 @@ module.exports = merge(baseConfig, {
     unsafeCache: true,
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, '../example/tsconfig.json'),
+        configFile: path.resolve(__dirname, '../public/tsconfig.json'),
       }),
     ],
     alias: {
       'react-notion-avatar': path.resolve(__dirname, '../src'),
-      'shared-style': path.resolve(__dirname, '../example/src/scss'),
+      'shared-style': path.resolve(__dirname, '../public/src/scss'),
     },
   },
   entry: {
     app:
       process.env.NODE_ENV === 'production'
-        ? path.resolve(__dirname, '../example/src/index.tsx')
+        ? path.resolve(__dirname, '../public/src/index.tsx')
         : [
             'react-hot-loader/patch',
-            path.resolve(__dirname, '../example/src/index.tsx'),
+            path.resolve(__dirname, '../public/src/index.tsx'),
           ],
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../example/dist'),
+    path: path.resolve(__dirname, '../public/dist'),
     publicPath: '/',
   },
   devServer: {
     hot: true,
     hotOnly: true,
-    contentBase: path.resolve(__dirname, '../example/dist'),
+    contentBase: path.resolve(__dirname, '../public/dist'),
     publicPath: '/',
     historyApiFallback: true,
     stats: 'minimal',
@@ -51,7 +51,7 @@ module.exports = merge(baseConfig, {
     }),
     new HtmlWebpackPlugin({
       title: 'web',
-      template: path.resolve(__dirname, '../example/public/index.html'),
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
     new MiniCssExtractPlugin({
       ignoreOrder: true,

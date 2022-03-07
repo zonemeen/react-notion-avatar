@@ -20,11 +20,11 @@ module.exports = merge(baseConfig, {
     ],
   },
   entry: {
-    index: path.resolve(__dirname, '../example/src/index.tsx'),
+    index: path.resolve(__dirname, '../public/src/index.tsx'),
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../example/dist'),
+    path: path.resolve(__dirname, '../public/dist'),
     libraryTarget: 'commonjs2',
   },
   plugins: [
@@ -33,7 +33,7 @@ module.exports = merge(baseConfig, {
     }),
     new HtmlWebpackPlugin({
       title: 'web',
-      template: path.resolve(__dirname, '../example/public/index.html'),
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
     new MiniCssExtractPlugin({
       ignoreOrder: true,

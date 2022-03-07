@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader'
 import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
 
-import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
+import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 
 import AvatarEditor from './AvatarEditor/index'

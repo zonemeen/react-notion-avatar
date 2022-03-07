@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 type Style = {
   [key: string]: string | number | boolean
 }
@@ -29,4 +27,8 @@ export interface NotionAvatarProps {
 
 export type AvatarPart = keyof AvatarConfig
 
-export declare const getRandomConfig: () => AvatarConfig
+declare const getRandomConfig: () => AvatarConfig
+
+declare const NotionAvatar: (props: NotionAvatarProps) => JSX.Element
+
+export { NotionAvatar, getRandomConfig }
