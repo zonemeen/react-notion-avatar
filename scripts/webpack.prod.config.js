@@ -6,6 +6,7 @@ const TerserJSPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const baseConfig = require('./webpack.base.config')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
@@ -29,6 +30,10 @@ module.exports = merge(baseConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'web',
+      template: path.resolve(__dirname, '../example/public/index.html'),
     }),
     new MiniCssExtractPlugin({
       ignoreOrder: true,

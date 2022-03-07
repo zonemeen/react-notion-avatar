@@ -10,8 +10,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "npx webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
-    "build-pro": "npx webpack --config ./scripts/webpack.prod.config.js --progress --bail",
+    "dev": "webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
+    "build-pro": "webpack --config ./scripts/webpack.prod.config.js --progress --bail",
     "build": "rimraf dist && tsup src/index.tsx --dts --minify --format esm,cjs && cp src/types.ts dist/index.d.ts",
     "prepublishOnly": "yarn build",
     "release": "bumpp --commit --push --tag && npm publish"
