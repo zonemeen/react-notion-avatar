@@ -1,20 +1,17 @@
 {
   "name": "react-notion-avatar",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "react library for generating notion-style avatar",
   "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "npx webpack-dev-server --config ./scripts/webpack.dev.config.js --progress",
-    "build": "rimraf dist && tsup src/index.tsx --format esm,cjs --dts --minify --external react",
+    "build": "rimraf dist && tsup src/index.tsx --dts --minify --format esm,cjs && cp src/types.ts dist/index.d.ts",
     "prepublishOnly": "yarn build",
     "release": "bumpp --commit --push --tag && npm publish"
   },
@@ -79,7 +76,7 @@
     "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
-    "react-notion-avatar": "^1.0.8",
+    "react-notion-avatar": "latest",
     "rimraf": "^3.0.2",
     "sass": "^1.38.0",
     "sass-loader": "^10.2.0",

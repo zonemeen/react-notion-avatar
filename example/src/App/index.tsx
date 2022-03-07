@@ -4,7 +4,7 @@ import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
 
 import NotionAvatar, { getRandomConfig } from '../../../dist/index.mjs'
-import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
+import type { AvatarConfig, AvatarPart, ShapeTypes } from '../../../dist'
 
 import AvatarEditor from './AvatarEditor/index'
 import Footer from './Footer/index'

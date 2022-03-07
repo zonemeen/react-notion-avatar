@@ -2703,11 +2703,6 @@ chownr@^1.1.1, chownr@^1.1.2:
   resolved "https://registry.npmmirror.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
-chroma-js@^2.1.2:
-  version "2.4.2"
-  resolved "https://registry.npmmirror.com/chroma-js/-/chroma-js-2.4.2.tgz#dffc214ed0c11fa8eefca2c36651d8e57cbfb2b0"
-  integrity sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==
-
 chrome-trace-event@^1.0.2:
   version "1.0.3"
   resolved "https://registry.npmmirror.com/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz#1015eced4741e15d06664a957dbbf50d041e26ac"
@@ -7952,13 +7947,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npmmirror.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-notion-avatar@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-notion-avatar/-/react-notion-avatar-1.0.8.tgz#30c500233d96fc0ba5a58a165601dbb502e93ee1"
-  integrity sha512-2aosZZKTv5TBwhcqidYS2q/6PC2yu5GZX0aX8K0cxSSIBRmcUy3vpN9vOHf+jndpstt5/kOp77D79aJiF+wG8A==
-  dependencies:
-    chroma-js "^2.1.2"
-    prop-types "^15.7.2"
+react-notion-avatar@latest:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-notion-avatar/-/react-notion-avatar-1.0.9.tgz#2c875bd2d16cce4b99cc57e05bdbbbb155972a17"
+  integrity sha512-BEIkqHVXCfnWtjegqy3AX7IxEVjTKULDzxuxHV1Q2QPOXY4yEvPrMrcbU/ZTlH+3ysDCyh+iYq9xuV/uivYgxA==
 
 react@^17.0.2:
   version "17.0.2"

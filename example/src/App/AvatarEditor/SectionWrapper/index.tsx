@@ -10,7 +10,6 @@ export default function sectionWrapper(props: {
   isSvgElement?: boolean
 }) {
   const { className = '', children, switchConfig, tip, isSvgElement } = props
-  console.log('isSvgElement', isSvgElement)
   return (
     <div
       className={'SectionWrapper ' + className}
