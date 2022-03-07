@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/", // path to output directory
-    "sourceMap": false, // allow sourcemap support
-    "strictNullChecks": true, // enable strict null checks as a best practice
-    "module": "es6", // specify module code generation
-    "jsx": "react", // use typescript to transpile jsx to js
+    "strictNullChecks": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react",
     "strict": true,
-    "target": "es5", // specify ECMAScript target version
-    "allowJs": true, // allow a partial TypeScript and JavaScript codebase
-    "allowSyntheticDefaultImports": true, // import default
-    "baseUrl": "."
+    "moduleResolution": "Node",
+    "target": "es2017",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/"]
 }
