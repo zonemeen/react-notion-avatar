@@ -28,3 +28,5 @@ export interface NotionAvatarProps {
 }
 
 export type AvatarPart = keyof AvatarConfig
+
+export declare const getRandomConfig: () => AvatarConfig

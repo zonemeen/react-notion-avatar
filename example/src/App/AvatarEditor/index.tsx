@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 
-import { getRandomConfig } from '../../../../src/index'
 import { AvatarConfigCount } from '../../../../src/const'
 import { AvatarConfig, AvatarPart, ShapeTypes } from '../../types'
 
