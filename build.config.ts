@@ -1,7 +1,8 @@
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
-  entries: ['src/index'],
+  entries: ['package/index'],
+  outDir: './notion-dist',
   declaration: true,
   clean: true,
   rollup: {
