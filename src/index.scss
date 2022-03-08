@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./scss/iconfont";
+@import "./scss/fonts";
+
 html {
   font: 16px/1.25 -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Hiragino Sans GB,Simsun,Arial,sans-self;
   text-rendering: optimizeLegibility;
@@ -15,4 +18,10 @@ body {
 
 p {
   margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
 }

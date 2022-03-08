@@ -8,8 +8,6 @@ import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 import AvatarEditor from './components/AvatarEditor/index'
 import Footer from './components/Footer/index'
 
-require('./components/index.scss')
-
 const App = () => {
   const [config, setConfig] = useState({
     ...(getRandomConfig() as AvatarConfig),
