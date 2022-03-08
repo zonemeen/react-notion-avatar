@@ -177,7 +177,7 @@ const AvatarEditor = ({
         switchConfig={() => switchShape(shape)}
       >
         <div
-          className={classnames('w-4 h-4 bg-white', {
+          className={classnames('w-4 h-4 bg-black', {
             'rounded-full': shape === 'circle',
             rounded: shape === 'rounded',
           })}
