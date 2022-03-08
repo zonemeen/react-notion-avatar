@@ -203,17 +203,21 @@ const AvatarEditor = ({
           data-tip="Config"
           onClick={(e) => toggleCodeShow(e)}
         />
-        <div
-          className={classnames(
-            'rounded-lg bg-white p-5 absolute bottom-full codeBlock mb-4',
-            {
-              active: isCodeShow,
-            }
-          )}
-          onClick={(e) => setCodeShowIsTrue(e)}
-        >
-          <pre className="text-xs highres:text-sm">{genCodeString(config)}</pre>
-        </div>
+        {isCodeShow && (
+          <div
+            className={classnames(
+              'rounded-lg bg-white p-5 absolute bottom-full codeBlock mb-4',
+              {
+                active: isCodeShow,
+              }
+            )}
+            onClick={(e) => setCodeShowIsTrue(e)}
+          >
+            <pre className="text-xs highres:text-sm">
+              {genCodeString(config)}
+            </pre>
+          </div>
+        )}
       </div>
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
