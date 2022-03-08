@@ -13,7 +13,7 @@ const App = () => {
     ...(getRandomConfig() as AvatarConfig),
   })
   const [shape, setShape] = useState('circle' as ShapeTypes)
-  const [bgColor, setBgColor] = useState('#ffffff')
+  const [bgColor] = useState('#ffffff')
   const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
