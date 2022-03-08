@@ -66,15 +66,15 @@ const AvatarEditor = ({
     setIsCodeShow(!isCodeShow)
   }
   const genCodeString = (config: AvatarConfig) => {
-    const ignoreAttr = ['id']
-    const myConfig = Object.keys(config)
-      .filter((key) => !ignoreAttr.includes(key))
-      .reduce((acc, key) => ({ ...acc, [key]: config[key as AvatarPart] }), {})
+    const myConfig = Object.keys(config).reduce(
+      (acc, key) => ({ ...acc, [key]: config[key as AvatarPart] }),
+      {}
+    )
     return (
       'const config = ' +
       JSON.stringify(myConfig, null, 2) +
       '\n' +
-      "<NotionAvatar style={{ width: '5rem', height: '5rem' }} config={config} />"
+      `<NotionAvatar style={{ width: '5rem', height: '5rem' }} shape="${shape}" config={config} />`
     )
   }
   return (
@@ -177,7 +177,7 @@ const AvatarEditor = ({
         switchConfig={() => switchShape(shape)}
       >
         <div
-          className={classnames('w-3 h-3 bg-white', {
+          className={classnames('w-4 h-4 bg-white', {
             'rounded-full': shape === 'circle',
             rounded: shape === 'rounded',
           })}
@@ -193,7 +193,7 @@ const AvatarEditor = ({
             }
           )}
           data-tip="Config"
-          onClick={() => toggleCodeShow()}
+          onClick={toggleCodeShow}
         />
         <div
           className={classnames(

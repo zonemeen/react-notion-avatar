@@ -41,7 +41,7 @@ const App = () => {
   return (
     <div className="App flex flex-col min-h-screen">
       <main className="flex-1 flex flex-col items-center justify-center">
-        <div id="myAvatar" className="mb-10">
+        <div id="myAvatar" className="mb-32">
           <NotionAvatar
             className="w-64 h-64 highres:w-80 highres:h-80"
             shape={shape}
@@ -49,13 +49,15 @@ const App = () => {
             config={config}
           />
         </div>
-        <AvatarEditor
-          config={config}
-          shape={shape}
-          updateConfig={updateConfig}
-          updateShape={updateShape}
-          download={download}
-        />
+        <div>
+          <AvatarEditor
+            config={config}
+            shape={shape}
+            updateConfig={updateConfig}
+            updateShape={updateShape}
+            download={download}
+          />
+        </div>
       </main>
 
       {/* Footer */}
