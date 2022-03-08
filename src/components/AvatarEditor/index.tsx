@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
@@ -62,8 +62,13 @@ const AvatarEditor = ({
       updateShape(shapes[newIdx] as ShapeTypes)
     }
   }
-  const toggleCodeShow = () => {
+  const toggleCodeShow = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation()
     setIsCodeShow(!isCodeShow)
+  }
+  const setCodeShowIsTrue = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation()
+    setIsCodeShow(true)
   }
   const genCodeString = (config: AvatarConfig) => {
     const myConfig = Object.keys(config).reduce(
@@ -77,6 +82,9 @@ const AvatarEditor = ({
       `<NotionAvatar style={{ width: '5rem', height: '5rem' }} shape="${shape}" config={config} />`
     )
   }
+  useEffect(() => {
+    document.addEventListener('click', (e) => setIsCodeShow(false))
+  }, [])
   return (
     <div className="AvatarEditor rounded-full px-3 py-2 flex items-center">
       {/* Face */}
@@ -193,7 +201,7 @@ const AvatarEditor = ({
             }
           )}
           data-tip="Config"
-          onClick={toggleCodeShow}
+          onClick={(e) => toggleCodeShow(e)}
         />
         <div
           className={classnames(
@@ -202,11 +210,11 @@ const AvatarEditor = ({
               active: isCodeShow,
             }
           )}
+          onClick={(e) => setCodeShowIsTrue(e)}
         >
           <pre className="text-xs highres:text-sm">{genCodeString(config)}</pre>
         </div>
       </div>
-
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
         className="iconfont icon-download text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
