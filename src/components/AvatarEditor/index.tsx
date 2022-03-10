@@ -96,7 +96,7 @@ const AvatarEditor = ({
       'const config = ' +
       JSON.stringify(myConfig, null, 2) +
       '\n' +
-      `<NotionAvatar style={{ width: '5rem', height: '5rem' }} shape="${shape}" config={config} />`
+      `<NotionAvatar style={{ width: '5rem', height: '5rem' }} bgColor="${bgColor}" shape="${shape}" config={config} />`
     )
   }
   useEffect(() => {
