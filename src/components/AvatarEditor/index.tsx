@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
-
+import { HexColorPicker } from 'react-colorful'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 
 import Accessory from './parts/accessory/index'
@@ -20,11 +20,13 @@ import './index.scss'
 
 type EditorProps = {
   config: AvatarConfig
+  bgColor: string
   shape: ShapeTypes
-  updateConfig?: (type: AvatarPart, value: number) => void
-  updateShape?: (shape: ShapeTypes) => void
-  downloadAvatar?: () => void
-  getRandomStyle?: () => void
+  updateConfig: (type: AvatarPart, value: number) => void
+  updateShape: (shape: ShapeTypes) => void
+  setBgColor: (newColor: string) => void
+  downloadAvatar: () => void
+  getRandomStyle: () => void
 }
 
 const AvatarConfigCount: AvatarConfig = {
@@ -42,14 +44,17 @@ const AvatarConfigCount: AvatarConfig = {
 
 const AvatarEditor = ({
   config,
+  bgColor,
   shape,
   updateConfig,
   updateShape,
+  setBgColor,
   downloadAvatar,
   getRandomStyle,
 }: EditorProps) => {
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
+  const [isPaletteShow, setIsPaletteShow] = useState(false)
   const switchConfig = (type: AvatarPart, currentIdx: number) => {
     const optLength = AvatarConfigCount[type]
     const newIdx = (currentIdx + 1) % optLength
@@ -68,6 +73,16 @@ const AvatarEditor = ({
     e.stopPropagation()
     setIsCodeShow(!isCodeShow)
   }
+  const togglePaletteShow = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation()
+    setIsPaletteShow(!isPaletteShow)
+  }
+  const setPaletteShowIsTrue = (
+    e: React.MouseEvent<HTMLElement, MouseEvent>
+  ) => {
+    e.stopPropagation()
+    setIsPaletteShow(true)
+  }
   const setCodeShowIsTrue = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     e.stopPropagation()
     setIsCodeShow(true)
@@ -85,7 +100,10 @@ const AvatarEditor = ({
     )
   }
   useEffect(() => {
-    document.addEventListener('click', (e) => setIsCodeShow(false))
+    document.addEventListener('click', (e) => {
+      setIsCodeShow(false)
+      setIsPaletteShow(false)
+    })
   }, [])
   return (
     <div className="AvatarEditor rounded-full px-3 py-2 flex items-center">
@@ -173,7 +191,7 @@ const AvatarEditor = ({
         isSvgElement={false}
         className="w-12 h-12 rounded-full p-2 mx-2"
         tip="Shape"
-        switchConfig={() => switchShape(shape)}
+        switchConfig={() => switchShape(shape as ShapeTypes)}
       >
         <div
           className={classnames('w-4 h-4 bg-black', {
@@ -182,6 +200,27 @@ const AvatarEditor = ({
           })}
         />
       </SectionWrapper>
+      <div className="divider w-0.5 h-5 rounded mx-2" />
+      <div className="relative flex justify-center">
+        <i
+          className="iconfont icon-Palette text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
+          data-tip="Palette"
+          onClick={(e) => togglePaletteShow(e)}
+        />
+        {isPaletteShow && (
+          <div
+            className={classnames('absolute bottom-full mb-4', {
+              active: isCodeShow,
+            })}
+            onClick={(e) => setPaletteShowIsTrue(e)}
+          >
+            <HexColorPicker
+              color={bgColor}
+              onChange={(newColor) => setBgColor(newColor)}
+            />
+          </div>
+        )}
+      </div>
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
         className="iconfont icon-dice-d-solid text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"

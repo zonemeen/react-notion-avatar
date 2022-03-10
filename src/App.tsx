@@ -14,7 +14,7 @@ const App = () => {
     ...(getRandomConfig() as AvatarConfig),
   })
   const [shape, setShape] = useState('circle' as ShapeTypes)
-  const [bgColor] = useState('#ffffff')
+  const [bgColor, setBgcolor] = useState('#ffffff')
   const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
@@ -25,6 +25,9 @@ const App = () => {
   const getRandomStyle = () => {
     const randomConfig = getRandomConfig()
     setConfig({ ...randomConfig })
+  }
+  const setBgColor = (newColor: string) => {
+    setBgcolor(newColor)
   }
   const celebrate = () => {
     const defaults = {
@@ -89,9 +92,11 @@ const App = () => {
         <div>
           <AvatarEditor
             config={config}
+            bgColor={bgColor}
             shape={shape}
             updateConfig={updateConfig}
             updateShape={updateShape}
+            setBgColor={setBgColor}
             downloadAvatar={downloadAvatar}
             getRandomStyle={getRandomStyle}
           />
