@@ -1,25 +1,34 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2775778 */
-  src: url('//at.alicdn.com/t/font_2775778_au7nh895x2.woff2?t=1630247220481') format('woff2'),
-       url('//at.alicdn.com/t/font_2775778_au7nh895x2.woff?t=1630247220481') format('woff'),
-       url('//at.alicdn.com/t/font_2775778_au7nh895x2.ttf?t=1630247220481') format('truetype');
+  font-family: 'iconfont';  /* Project id 3237384 */
+  src: url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.woff2?t=1646911446084') format('woff2'),
+  url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.woff?t=1646911446084') format('woff'),
+  url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.ttf?t=1646911446084') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
+  font-size: 22px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dice-d-solid:before {
+  content: "\e674";
+}
+
 .icon-download:before {
-  content: "\e66c";
+  content: "\e7ef";
+}
+
+.icon-Palette:before {
+  content: "\e673";
+}
+
+.icon-flip-horizontally:before {
+  content: "\e70b";
 }
 
 .icon-code:before {
   content: "\e6f2";
-}
-
-.icon-arrow-right-filling-center:before {
-  content: "\e7b5";
 }

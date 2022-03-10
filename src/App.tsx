@@ -22,6 +22,10 @@ const App = () => {
   const updateShape = (shape: ShapeTypes) => {
     setShape(shape)
   }
+  const getRandomStyle = () => {
+    const randomConfig = getRandomConfig()
+    setConfig({ ...randomConfig })
+  }
   const celebrate = () => {
     const defaults = {
       colors: ['#5D8C7B', '#F2D091', '#F2A679', '#D9695F', '#8C4646'],
@@ -53,10 +57,10 @@ const App = () => {
       })
     }, 400)
   }
-  const download = async () => {
+  const downloadAvatar = async () => {
     celebrate()
     const scale = 2
-    const node = document.getElementById('myAvatar')
+    const node = document.getElementById('notionAvatar')
     if (node) {
       const blob = await domtoimage.toBlob(node, {
         height: node.offsetHeight * scale,
@@ -74,7 +78,7 @@ const App = () => {
   return (
     <div className="App flex flex-col min-h-screen">
       <main className="flex-1 flex flex-col items-center justify-center">
-        <div id="myAvatar" className="mb-32">
+        <div id="notionAvatar" className="mb-32">
           <NotionAvatar
             className="w-64 h-64 highres:w-80 highres:h-80"
             shape={shape}
@@ -88,12 +92,11 @@ const App = () => {
             shape={shape}
             updateConfig={updateConfig}
             updateShape={updateShape}
-            download={download}
+            downloadAvatar={downloadAvatar}
+            getRandomStyle={getRandomStyle}
           />
         </div>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   )

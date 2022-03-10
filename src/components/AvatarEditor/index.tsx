@@ -23,7 +23,8 @@ type EditorProps = {
   shape: ShapeTypes
   updateConfig?: (type: AvatarPart, value: number) => void
   updateShape?: (shape: ShapeTypes) => void
-  download?: () => void
+  downloadAvatar?: () => void
+  getRandomStyle?: () => void
 }
 
 const AvatarConfigCount: AvatarConfig = {
@@ -44,7 +45,8 @@ const AvatarEditor = ({
   shape,
   updateConfig,
   updateShape,
-  download,
+  downloadAvatar,
+  getRandomStyle,
 }: EditorProps) => {
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
@@ -87,7 +89,6 @@ const AvatarEditor = ({
   }, [])
   return (
     <div className="AvatarEditor rounded-full px-3 py-2 flex items-center">
-      {/* Face */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -96,7 +97,6 @@ const AvatarEditor = ({
       >
         <Face type={config.face} />
       </SectionWrapper>
-      {/* Eye */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -105,7 +105,6 @@ const AvatarEditor = ({
       >
         <Eye type={config.eye} />
       </SectionWrapper>
-      {/* Eyebrow */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -114,7 +113,6 @@ const AvatarEditor = ({
       >
         <Eyebrow type={config.eyebrow} />
       </SectionWrapper>
-      {/* Glass */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -123,7 +121,6 @@ const AvatarEditor = ({
       >
         <Glass type={config.glass} />
       </SectionWrapper>
-      {/* Hair */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -132,7 +129,6 @@ const AvatarEditor = ({
       >
         <Hair type={config.hair} />
       </SectionWrapper>
-      {/* Mouth */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -141,7 +137,6 @@ const AvatarEditor = ({
       >
         <Mouth type={config.mouth} />
       </SectionWrapper>
-      {/* Nose */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -150,7 +145,6 @@ const AvatarEditor = ({
       >
         <Nose type={config.nose} />
       </SectionWrapper>
-      {/* Beard */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -159,7 +153,6 @@ const AvatarEditor = ({
       >
         <Beard type={config.beard} />
       </SectionWrapper>
-      {/* Accessory */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -168,7 +161,6 @@ const AvatarEditor = ({
       >
         <Accessory type={config.accessory} />
       </SectionWrapper>
-      {/* Detail */}
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -177,7 +169,6 @@ const AvatarEditor = ({
       >
         <Detail type={config.detail} />
       </SectionWrapper>
-      {/* Shape style */}
       <SectionWrapper
         isSvgElement={false}
         className="w-12 h-12 rounded-full p-2 mx-2"
@@ -191,6 +182,12 @@ const AvatarEditor = ({
           })}
         />
       </SectionWrapper>
+      <div className="divider w-0.5 h-5 rounded mx-2" />
+      <i
+        className="iconfont icon-dice-d-solid text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
+        data-tip="Random"
+        onClick={getRandomStyle}
+      />
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <div className="mx-2 relative flex justify-center">
         <i
@@ -223,7 +220,7 @@ const AvatarEditor = ({
       <i
         className="iconfont icon-download text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
         data-tip="Download"
-        onClick={download}
+        onClick={downloadAvatar}
       />
     </div>
   )
