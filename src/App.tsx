@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
+import confetti from 'canvas-confetti'
 
 import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
@@ -21,7 +22,39 @@ const App = () => {
   const updateShape = (shape: ShapeTypes) => {
     setShape(shape)
   }
+  const celebrate = () => {
+    const defaults = {
+      colors: ['#5D8C7B', '#F2D091', '#F2A679', '#D9695F', '#8C4646'],
+      shapes: ['square'],
+      ticks: 500,
+    } as confetti.Options
+    confetti({
+      ...defaults,
+      particleCount: 80,
+      spread: 100,
+      origin: { y: 0 },
+    })
+    setTimeout(() => {
+      confetti({
+        ...defaults,
+        particleCount: 50,
+        angle: 60,
+        spread: 80,
+        origin: { x: 0 },
+      })
+    }, 250)
+    setTimeout(() => {
+      confetti({
+        ...defaults,
+        particleCount: 50,
+        angle: 120,
+        spread: 80,
+        origin: { x: 1 },
+      })
+    }, 400)
+  }
   const download = async () => {
+    celebrate()
     const scale = 2
     const node = document.getElementById('myAvatar')
     if (node) {
