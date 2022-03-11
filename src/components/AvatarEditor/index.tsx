@@ -24,11 +24,11 @@ type EditorProps = {
   shape: ShapeTypes
   flipped: boolean
   updateConfig: (type: AvatarPart, value: number) => void
-  updateShape: (shape: ShapeTypes) => void
+  setShape: (shape: ShapeTypes) => void
   setBgColor: (newColor: string) => void
   downloadAvatar: () => void
   getRandomStyle: () => void
-  setAvatarFlipped: () => void
+  setFlipped: (flipped: boolean) => void
 }
 
 const AvatarConfigCount: AvatarConfig = {
@@ -50,11 +50,11 @@ const AvatarEditor = ({
   shape,
   flipped,
   updateConfig,
-  updateShape,
+  setShape,
   setBgColor,
   downloadAvatar,
   getRandomStyle,
-  setAvatarFlipped,
+  setFlipped,
 }: EditorProps) => {
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
@@ -62,34 +62,12 @@ const AvatarEditor = ({
   const switchConfig = (type: AvatarPart, currentIdx: number) => {
     const optLength = AvatarConfigCount[type]
     const newIdx = (currentIdx + 1) % optLength
-    if (updateConfig) {
-      updateConfig(type, newIdx)
-    }
+    updateConfig(type, newIdx)
   }
   const switchShape = (currentShape: ShapeTypes) => {
     const currentIdx = shapes.findIndex((item) => item === currentShape)
     const newIdx = (currentIdx + 1) % shapes.length
-    if (updateShape) {
-      updateShape(shapes[newIdx] as ShapeTypes)
-    }
-  }
-  const toggleCodeShow = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    e.stopPropagation()
-    setIsCodeShow(!isCodeShow)
-  }
-  const togglePaletteShow = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    e.stopPropagation()
-    setIsPaletteShow(!isPaletteShow)
-  }
-  const setPaletteShowIsTrue = (
-    e: React.MouseEvent<HTMLElement, MouseEvent>
-  ) => {
-    e.stopPropagation()
-    setIsPaletteShow(true)
-  }
-  const setCodeShowIsTrue = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    e.stopPropagation()
-    setIsCodeShow(true)
+    setShape(shapes[newIdx] as ShapeTypes)
   }
   const genCodeString = (config: AvatarConfig) => {
     const myConfig = Object.keys(config).reduce(
@@ -208,24 +186,24 @@ const AvatarEditor = ({
       <div
         className="iconfont mx-2 cursor-pointer transition duration-300"
         data-tip="Flip"
-        onClick={setAvatarFlipped}
+        onClick={() => setFlipped(!flipped)}
       >
         <svg viewBox="0 0 1024 1024" width="22" height="22">
           <path
             d="M159.530667 810.666667H362.666667a21.333333 21.333333 0 0 0 21.333333-21.333334V281.429333a21.333333 21.333333 0 0 0-41.130667-7.893333L139.690667 781.397333A21.333333 21.333333 0 0 0 159.573333 810.666667z"
             fill={flipped ? '#000000' : '#ffffff'}
             opacity="0.8"
-          ></path>
+          />
           <path
             d="M864.469333 810.666667H661.333333a21.333333 21.333333 0 0 1-21.333333-21.333334V281.429333a21.333333 21.333333 0 0 1 41.130667-7.893333l203.178666 507.861333a21.333333 21.333333 0 0 1-19.84 29.269334z"
             fill={flipped ? '#ffffff' : '#000000'}
             opacity="0.8"
-          ></path>
+          />
           <path
             d="M469.333333 85.333333m42.666667 0l0 0q42.666667 0 42.666667 42.666667l0 768q0 42.666667-42.666667 42.666667l0 0q-42.666667 0-42.666667-42.666667l0-768q0-42.666667 42.666667-42.666667Z"
             fill="#ffffff"
             opacity="0.2"
-          ></path>
+          />
         </svg>
       </div>
       <div className="divider w-0.5 h-5 rounded mx-2" />
@@ -233,14 +211,20 @@ const AvatarEditor = ({
         <i
           className="iconfont icon-Palette text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
           data-tip="Palette"
-          onClick={(e) => togglePaletteShow(e)}
+          onClick={(e) => {
+            e.stopPropagation()
+            setIsPaletteShow(!isPaletteShow)
+          }}
         />
         {isPaletteShow && (
           <div
             className={classnames('absolute bottom-full mb-4', {
               active: isCodeShow,
             })}
-            onClick={(e) => setPaletteShowIsTrue(e)}
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsPaletteShow(true)
+            }}
           >
             <HexColorPicker
               color={bgColor}
@@ -265,7 +249,10 @@ const AvatarEditor = ({
             }
           )}
           data-tip="Config"
-          onClick={(e) => toggleCodeShow(e)}
+          onClick={(e) => {
+            e.stopPropagation()
+            setIsCodeShow(!isCodeShow)
+          }}
         />
         {isCodeShow && (
           <div
@@ -275,7 +262,10 @@ const AvatarEditor = ({
                 active: isCodeShow,
               }
             )}
-            onClick={(e) => setCodeShowIsTrue(e)}
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsCodeShow(true)
+            }}
           >
             <pre className="flex flex-wrap text-xs w-80 overFlow highres:text-sm">
               {genCodeString(config)}

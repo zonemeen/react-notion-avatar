@@ -15,24 +15,15 @@ const App = () => {
     ...(getRandomConfig() as AvatarConfig),
   })
   const [shape, setShape] = useState('circle' as ShapeTypes)
-  const [bgColor, setBgcolor] = useState('#ffffff')
+  const [bgColor, setBgColor] = useState('#ffffff')
   const [flipped, setFlipped] = useState(false)
   const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
   }
-  const updateShape = (shape: ShapeTypes) => {
-    setShape(shape)
-  }
   const getRandomStyle = () => {
     const randomConfig = getRandomConfig()
     setConfig({ ...randomConfig })
-  }
-  const setBgColor = (newColor: string) => {
-    setBgcolor(newColor)
-  }
-  const setAvatarFlipped = () => {
-    setFlipped(!flipped)
   }
   const celebrate = () => {
     const defaults = {
@@ -103,11 +94,11 @@ const App = () => {
             shape={shape}
             flipped={flipped}
             updateConfig={updateConfig}
-            updateShape={updateShape}
+            setShape={setShape}
             setBgColor={setBgColor}
+            setFlipped={setFlipped}
             downloadAvatar={downloadAvatar}
             getRandomStyle={getRandomStyle}
-            setAvatarFlipped={setAvatarFlipped}
           />
         </div>
       </main>
