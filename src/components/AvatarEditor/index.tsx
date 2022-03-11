@@ -22,11 +22,13 @@ type EditorProps = {
   config: AvatarConfig
   bgColor: string
   shape: ShapeTypes
+  flipped: boolean
   updateConfig: (type: AvatarPart, value: number) => void
   updateShape: (shape: ShapeTypes) => void
   setBgColor: (newColor: string) => void
   downloadAvatar: () => void
   getRandomStyle: () => void
+  setAvatarFlipped: () => void
 }
 
 const AvatarConfigCount: AvatarConfig = {
@@ -46,11 +48,13 @@ const AvatarEditor = ({
   config,
   bgColor,
   shape,
+  flipped,
   updateConfig,
   updateShape,
   setBgColor,
   downloadAvatar,
   getRandomStyle,
+  setAvatarFlipped,
 }: EditorProps) => {
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
@@ -201,9 +205,33 @@ const AvatarEditor = ({
         />
       </SectionWrapper>
       <div className="divider w-0.5 h-5 rounded mx-2" />
+      <div
+        className="iconfont mx-2 cursor-pointer transition duration-300"
+        data-tip="Flip"
+        onClick={setAvatarFlipped}
+      >
+        <svg viewBox="0 0 1024 1024" width="22" height="22">
+          <path
+            d="M159.530667 810.666667H362.666667a21.333333 21.333333 0 0 0 21.333333-21.333334V281.429333a21.333333 21.333333 0 0 0-41.130667-7.893333L139.690667 781.397333A21.333333 21.333333 0 0 0 159.573333 810.666667z"
+            fill={flipped ? '#000000' : '#ffffff'}
+            opacity="0.8"
+          ></path>
+          <path
+            d="M864.469333 810.666667H661.333333a21.333333 21.333333 0 0 1-21.333333-21.333334V281.429333a21.333333 21.333333 0 0 1 41.130667-7.893333l203.178666 507.861333a21.333333 21.333333 0 0 1-19.84 29.269334z"
+            fill={flipped ? '#ffffff' : '#000000'}
+            opacity="0.8"
+          ></path>
+          <path
+            d="M469.333333 85.333333m42.666667 0l0 0q42.666667 0 42.666667 42.666667l0 768q0 42.666667-42.666667 42.666667l0 0q-42.666667 0-42.666667-42.666667l0-768q0-42.666667 42.666667-42.666667Z"
+            fill="#ffffff"
+            opacity="0.2"
+          ></path>
+        </svg>
+      </div>
+      <div className="divider w-0.5 h-5 rounded mx-2" />
       <div className="relative flex justify-center">
         <i
-          className="iconfont icon-Palette text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
+          className="iconfont icon-Palette text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
           data-tip="Palette"
           onClick={(e) => togglePaletteShow(e)}
         />
@@ -223,7 +251,7 @@ const AvatarEditor = ({
       </div>
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
-        className="iconfont icon-dice-d-solid text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
+        className="iconfont icon-dice-d-solid text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
         data-tip="Random"
         onClick={getRandomStyle}
       />
@@ -231,7 +259,7 @@ const AvatarEditor = ({
       <div className="mx-2 relative flex justify-center">
         <i
           className={classnames(
-            'iconfont icon-code text-xl cursor-pointer transition duration-300 hover:text-green-100',
+            'iconfont icon-code text-xl cursor-pointer transition duration-300 opacity-80',
             {
               banTip: isCodeShow,
             }
@@ -257,7 +285,7 @@ const AvatarEditor = ({
       </div>
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
-        className="iconfont icon-download text-xl mx-2 cursor-pointer transition duration-300 hover:text-green-100"
+        className="iconfont icon-download text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
         data-tip="Download"
         onClick={downloadAvatar}
       />

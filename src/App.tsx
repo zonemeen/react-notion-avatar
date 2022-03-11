@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
 import confetti from 'canvas-confetti'
+import classnames from 'classnames'
 
 import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
@@ -15,6 +16,7 @@ const App = () => {
   })
   const [shape, setShape] = useState('circle' as ShapeTypes)
   const [bgColor, setBgcolor] = useState('#ffffff')
+  const [flipped, setFlipped] = useState(false)
   const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
@@ -28,6 +30,9 @@ const App = () => {
   }
   const setBgColor = (newColor: string) => {
     setBgcolor(newColor)
+  }
+  const setAvatarFlipped = () => {
+    setFlipped(!flipped)
   }
   const celebrate = () => {
     const defaults = {
@@ -83,7 +88,9 @@ const App = () => {
       <main className="flex-1 flex flex-col items-center justify-center">
         <div id="notionAvatar" className="mb-32">
           <NotionAvatar
-            className="w-64 h-64 highres:w-80 highres:h-80"
+            className={classnames('w-64 h-64 highres:w-80 highres:h-80', {
+              flip: flipped,
+            })}
             shape={shape}
             bgColor={bgColor}
             config={config}
@@ -94,11 +101,13 @@ const App = () => {
             config={config}
             bgColor={bgColor}
             shape={shape}
+            flipped={flipped}
             updateConfig={updateConfig}
             updateShape={updateShape}
             setBgColor={setBgColor}
             downloadAvatar={downloadAvatar}
             getRandomStyle={getRandomStyle}
+            setAvatarFlipped={setAvatarFlipped}
           />
         </div>
       </main>
