@@ -25,3 +25,24 @@ p {
   background: rgb(17,17,17);
   color: rgb(245,245,245);
 }
+
+.overFlow {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    opacity: 0;
+    border-radius: 4px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    background: hsla(0, 0%, 53%, 0.4);
+  }
+  &:hover::-webkit-scrollbar-track {
+    opacity: 1;
+    background: hsla(0, 0%, 53%, 0.1);
+  }
+}

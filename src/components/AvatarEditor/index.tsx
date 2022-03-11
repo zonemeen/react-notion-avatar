@@ -249,7 +249,7 @@ const AvatarEditor = ({
             )}
             onClick={(e) => setCodeShowIsTrue(e)}
           >
-            <pre className="text-xs highres:text-sm">
+            <pre className="flex flex-wrap text-xs w-80 overFlow highres:text-sm">
               {genCodeString(config)}
             </pre>
           </div>
