@@ -21,6 +21,7 @@
   }
   .iconfont {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     position: relative;
     &:hover {
@@ -32,6 +33,7 @@
     }
     &:after {
       content: attr(data-tip);
+      white-space: pre;
       position: absolute;
       bottom: 120%;
       border-radius: 5px;
