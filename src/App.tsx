@@ -7,6 +7,7 @@ import classnames from 'classnames'
 import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 
+import Header from './components/Header/index'
 import AvatarEditor from './components/AvatarEditor/index'
 import Footer from './components/Footer/index'
 
@@ -76,6 +77,7 @@ const App = () => {
   }
   return (
     <div className="App flex flex-col min-h-screen">
+      <Header />
       <main className="flex-1 flex flex-col items-center justify-center">
         <div id="notionAvatar" className="mb-32">
           <NotionAvatar

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 import { HexColorPicker } from 'react-colorful'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
+import { useTranslation } from 'react-i18next'
+import { Translations } from '../../translations'
 
 import Accessory from './parts/accessory/index'
 import Beard from './parts/beard/index'
@@ -56,6 +58,7 @@ const AvatarEditor = ({
   getRandomStyle,
   setFlipped,
 }: EditorProps) => {
+  const { t } = useTranslation()
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
   const [isPaletteShow, setIsPaletteShow] = useState(false)
@@ -92,7 +95,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Face"
+        tip={t('tip.Face')}
         switchConfig={() => switchConfig('face', config.face)}
       >
         <Face type={config.face} />
@@ -100,7 +103,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Eye"
+        tip={t('tip.Eye')}
         switchConfig={() => switchConfig('eye', config.eye)}
       >
         <Eye type={config.eye} />
@@ -108,7 +111,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Eye"
+        tip={t('tip.Eyebrow')}
         switchConfig={() => switchConfig('eyebrow', config.eyebrow)}
       >
         <Eyebrow type={config.eyebrow} />
@@ -116,7 +119,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Glass"
+        tip={t('tip.Glass')}
         switchConfig={() => switchConfig('glass', config.glass)}
       >
         <Glass type={config.glass} />
@@ -124,7 +127,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Hair"
+        tip={t('tip.Hair')}
         switchConfig={() => switchConfig('hair', config.hair)}
       >
         <Hair type={config.hair} />
@@ -132,7 +135,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Mouth"
+        tip={t('tip.Mouth')}
         switchConfig={() => switchConfig('mouth', config.mouth)}
       >
         <Mouth type={config.mouth} />
@@ -140,7 +143,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Nose"
+        tip={t('tip.Nose')}
         switchConfig={() => switchConfig('nose', config.nose)}
       >
         <Nose type={config.nose} />
@@ -148,7 +151,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Beard"
+        tip={t('tip.Beard')}
         switchConfig={() => switchConfig('beard', config.beard)}
       >
         <Beard type={config.beard} />
@@ -156,7 +159,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Accessory"
+        tip={t('tip.Accessory')}
         switchConfig={() => switchConfig('accessory', config.accessory)}
       >
         <Accessory type={config.accessory} />
@@ -164,7 +167,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={true}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Detail"
+        tip={t('tip.Detail')}
         switchConfig={() => switchConfig('detail', config.detail)}
       >
         <Detail type={config.detail} />
@@ -172,7 +175,7 @@ const AvatarEditor = ({
       <SectionWrapper
         isSvgElement={false}
         className="w-12 h-12 rounded-full p-2 mx-2"
-        tip="Shape"
+        tip={t('tip.Shape')}
         switchConfig={() => switchShape(shape as ShapeTypes)}
       >
         <div
@@ -185,7 +188,7 @@ const AvatarEditor = ({
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <div
         className="iconfont mx-2 cursor-pointer transition duration-300"
-        data-tip="Flip"
+        data-tip={t('tip.Flip')}
         onClick={() => setFlipped(!flipped)}
       >
         <svg viewBox="0 0 1024 1024" width="22" height="22">
@@ -210,7 +213,7 @@ const AvatarEditor = ({
       <div className="relative flex justify-center">
         <i
           className="iconfont icon-Palette text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
-          data-tip="Palette"
+          data-tip={t('tip.Palette')}
           onClick={(e) => {
             e.stopPropagation()
             setIsPaletteShow(!isPaletteShow)
@@ -219,7 +222,7 @@ const AvatarEditor = ({
         {isPaletteShow && (
           <div
             className={classnames('absolute bottom-full mb-4', {
-              active: isCodeShow,
+              active: isPaletteShow,
             })}
             onClick={(e) => {
               e.stopPropagation()
@@ -236,7 +239,7 @@ const AvatarEditor = ({
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
         className="iconfont icon-dice-d-solid text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
-        data-tip="Random"
+        data-tip={t('tip.Random')}
         onClick={getRandomStyle}
       />
       <div className="divider w-0.5 h-5 rounded mx-2" />
@@ -248,7 +251,7 @@ const AvatarEditor = ({
               banTip: isCodeShow,
             }
           )}
-          data-tip="Config"
+          data-tip={t('tip.Config')}
           onClick={(e) => {
             e.stopPropagation()
             setIsCodeShow(!isCodeShow)
@@ -276,7 +279,7 @@ const AvatarEditor = ({
       <div className="divider w-0.5 h-5 rounded mx-2" />
       <i
         className="iconfont icon-download text-xl mx-2 cursor-pointer transition duration-300 opacity-80"
-        data-tip="Download"
+        data-tip={t('tip.Download')}
         onClick={downloadAvatar}
       />
     </div>
