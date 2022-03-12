@@ -3,7 +3,6 @@ import classnames from 'classnames'
 import { HexColorPicker } from 'react-colorful'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 import { useTranslation } from 'react-i18next'
-import { Translations } from '../../translations'
 
 import Accessory from './parts/accessory/index'
 import Beard from './parts/beard/index'
