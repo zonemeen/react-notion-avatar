@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./scss/iconfont";
-@import "./scss/fonts";
+@import './scss/iconfont';
+@import './scss/fonts';
 
 html {
-  font: 16px/1.25 -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Hiragino Sans GB,Simsun,Arial,sans-self;
+  font: 16px/1.25 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Hiragino Sans GB, Simsun, Arial, sans-self;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -22,8 +23,9 @@ p {
 
 #root {
   min-height: 100vh;
-  background: rgb(17,17,17);
-  color: rgb(245,245,245);
+  background: rgb(41,54,59);
+  background: linear-gradient(45deg, rgba(41,54,59,1) 0%, rgba(20,22,26,1) 50%, rgba(32,34,58,1) 100%);
+  color: rgb(245, 245, 245);
 }
 
 .overFlow {
@@ -47,7 +49,7 @@ p {
   }
 }
 
-.flip{
+.flip {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -o-transform: scaleX(-1);

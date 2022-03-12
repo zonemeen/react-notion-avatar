@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  padding: 1rem 2rem;
+  color: hsl(211, 19%, 70%);
+  .logo {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .site-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    cursor: default;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+  .header-right {
+    margin-left: auto;
+    .github-logo {
+      width: 1.8rem;
+      height: 1.8rem;
+      color: hsl(211, 19%, 70%);
+    }
+  }
+}

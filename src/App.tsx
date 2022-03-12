@@ -105,6 +105,10 @@ const App = () => {
         </div>
       </main>
       <Footer />
+      <div className="gradient-bg">
+        <div className="gradient-top"></div>
+        <div className="gradient-bottom"></div>
+      </div>
     </div>
   )
 }

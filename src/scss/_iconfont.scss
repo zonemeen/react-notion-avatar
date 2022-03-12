@@ -1,16 +1,25 @@
 @font-face {
-  font-family: 'iconfont';  /* Project id 3237384 */
-  src: url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.woff2?t=1646911446084') format('woff2'),
-  url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.woff?t=1646911446084') format('woff'),
-  url('//at.alicdn.com/t/font_3237384_whzskfcpyhj.ttf?t=1646911446084') format('truetype');
+  font-family: "iconfont"; /* Project id 3237384 */
+  src: url('//at.alicdn.com/t/font_3237384_9ua6gghqb9.woff2?t=1647088605165') format('woff2'),
+  url('//at.alicdn.com/t/font_3237384_9ua6gghqb9.woff?t=1647088605165') format('woff'),
+  url('//at.alicdn.com/t/font_3237384_9ua6gghqb9.ttf?t=1647088605165') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e651";
+}
+
+.icon-Notion:before {
+  content: "\e740";
+  width: 2.5rem;
 }
 
 .icon-dice-d-solid:before {
