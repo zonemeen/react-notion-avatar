@@ -3,7 +3,7 @@
   align-items: center;
   height: 6rem;
   padding: 1rem 2rem;
-  color: hsl(211, 19%, 70%);
+  color: #9da3ae;
   .logo {
     display: flex;
     align-items: center;
@@ -16,6 +16,7 @@
     font-weight: bold;
     font-size: 1.8rem;
     cursor: default;
+    margin-top: 0.4rem;
     @media screen and (max-width: 480px) {
       display: none;
     }
@@ -25,7 +26,7 @@
     .github-logo {
       width: 1.8rem;
       height: 1.8rem;
-      color: hsl(211, 19%, 70%);
+      color: #9da3ae;
     }
   }
 }
