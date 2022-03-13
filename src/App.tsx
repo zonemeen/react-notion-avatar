@@ -5,7 +5,7 @@ import confetti from 'canvas-confetti'
 import classnames from 'classnames'
 import { useTranslation } from 'react-i18next'
 
-import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
+import { NotionAvatar, getRandomConfig } from './package'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 import { LangType } from './i18n'
 
@@ -33,7 +33,7 @@ const App = () => {
   }
   const getRandomStyle = () => {
     const randomConfig = getRandomConfig()
-    setConfig({ ...randomConfig })
+    setConfig(randomConfig as AvatarConfig)
   }
   const celebrate = () => {
     const defaults = {

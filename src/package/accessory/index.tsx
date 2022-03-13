@@ -13,8 +13,6 @@ import Accessory9 from './9'
 import Accessory10 from './10'
 import Accessory11 from './11'
 import Accessory12 from './12'
-import Accessory13 from './13'
-import Accessory14 from './14'
 
 const Accessory = (props: { type: number }) => {
   const { type } = props
@@ -57,12 +55,6 @@ const Accessory = (props: { type: number }) => {
     }
     case 12: {
       return <Accessory12 />
-    }
-    case 13: {
-      return <Accessory13 />
-    }
-    case 14: {
-      return <Accessory14 />
     }
     default: {
       return <Accessory0 />

@@ -8,9 +8,9 @@ export const AvatarConfigCount: AvatarConfig = {
   eyebrow: 10,
   glass: 10,
   hair: 30,
-  accessory: 15,
+  accessory: 13,
   detail: 10,
-  beard: 10,
+  beard: 13,
 }
 
 export const ShapeBorderRadius = {
