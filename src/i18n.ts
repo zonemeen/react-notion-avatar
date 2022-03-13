@@ -1,5 +1,4 @@
 import i18n from 'i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import { Translations } from './translations'
 
@@ -23,30 +22,26 @@ type TranslateType = {
     'tip.Random': string
     'tip.Config': string
     'tip.Download': string
-    select: string
   }
 }
 
-type IdType = 'en-US' | 'zh-CN'
+export type LangType = 'en' | 'zh'
 
 type Resource = {
-  [id in IdType]: TranslateType
+  [id in LangType]: TranslateType
 }
 
 const resources = Translations.reduce((obj, curr) => {
-  obj[curr.id as IdType] = curr
+  obj[curr.id as LangType] = curr
   return obj
 }, {} as Resource)
 
-i18n
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .init({
-    fallbackLng: 'en-US',
-    resources,
-    interpolation: {
-      escapeValue: false,
-    },
-  })
+i18n.use(initReactI18next).init({
+  fallbackLng: 'en',
+  resources,
+  interpolation: {
+    escapeValue: false,
+  },
+})
 
 export default i18n

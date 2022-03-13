@@ -1,6 +1,6 @@
 export const Translations = [
   {
-    id: 'en-US',
+    id: 'en',
     name: 'English',
     translation: {
       'tip.Face': 'Face',
@@ -19,12 +19,11 @@ export const Translations = [
       'tip.Random': 'Random',
       'tip.Config': 'Config',
       'tip.Download': 'Download',
-      select: 'Select Language',
     },
   },
   {
-    id: 'zh-CN',
-    name: 'Simplified Chinese - 简体中文',
+    id: 'zh',
+    name: '简体中文',
     translation: {
       'tip.Face': '脸',
       'tip.Eye': '眼睛',
@@ -42,7 +41,6 @@ export const Translations = [
       'tip.Random': '随机',
       'tip.Config': '配置',
       'tip.Download': '下载',
-      select: '选择语言',
     },
   },
 ]

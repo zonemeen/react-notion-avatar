@@ -3,21 +3,30 @@ import domtoimage from 'dom-to-image'
 import { saveAs } from 'file-saver'
 import confetti from 'canvas-confetti'
 import classnames from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
+import { LangType } from './i18n'
 
 import Header from './components/Header/index'
 import AvatarEditor from './components/AvatarEditor/index'
 import Footer from './components/Footer/index'
 
 const App = () => {
+  const { i18n } = useTranslation()
   const [config, setConfig] = useState({
     ...(getRandomConfig() as AvatarConfig),
   })
   const [shape, setShape] = useState('circle' as ShapeTypes)
   const [bgColor, setBgColor] = useState('#ffffff')
   const [flipped, setFlipped] = useState(false)
+  const [language, setLanguage] = useState('en' as LangType)
+
+  const onChangeLanguage = (language: LangType) => {
+    setLanguage(language)
+    i18n.changeLanguage(language)
+  }
   const updateConfig = (key: AvatarPart, value: number) => {
     config[key] = value
     setConfig({ ...config })
@@ -104,7 +113,7 @@ const App = () => {
           />
         </div>
       </main>
-      <Footer />
+      <Footer language={language} onLanguageChange={onChangeLanguage} />
       <div className="gradient-bg">
         <div className="gradient-top"></div>
         <div className="gradient-bottom"></div>
