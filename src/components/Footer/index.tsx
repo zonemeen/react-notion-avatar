@@ -12,6 +12,7 @@ export default function footer({ language, onLanguageChange }: FooterProps) {
       <a
         href="https://www.buymeacoffee.com/miqilin18P"
         target="_blank"
+        rel="nofollow noopener noreferrer"
         className="transition-opacity duration-300 hover:opacity-75"
       >
         Buy Me A Coffee
