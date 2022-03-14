@@ -1,7 +1,7 @@
 import { AvatarConfig } from './types'
 
 export const AvatarConfigCount: AvatarConfig = {
-  face: 10,
+  face: 16,
   nose: 10,
   mouth: 10,
   eye: 14,
