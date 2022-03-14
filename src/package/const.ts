@@ -9,7 +9,7 @@ export const AvatarConfigCount: AvatarConfig = {
   glass: 10,
   hair: 30,
   accessory: 13,
-  detail: 10,
+  detail: 14,
   beard: 17,
 }
 

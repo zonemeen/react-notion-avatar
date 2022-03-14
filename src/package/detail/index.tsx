@@ -11,6 +11,9 @@ import Detail7 from './7'
 import Detail8 from './8'
 import Detail9 from './9'
 import Detail10 from './10'
+import Detail11 from './11'
+import Detail12 from './12'
+import Detail13 from './13'
 
 const Detail = (props: { type: number }) => {
   const { type } = props
@@ -47,6 +50,15 @@ const Detail = (props: { type: number }) => {
     }
     case 10: {
       return <Detail10 />
+    }
+    case 11: {
+      return <Detail11 />
+    }
+    case 12: {
+      return <Detail12 />
+    }
+    case 13: {
+      return <Detail13 />
     }
     default: {
       return <Detail0 />
