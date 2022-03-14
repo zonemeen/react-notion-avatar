@@ -36,7 +36,7 @@ const AvatarConfigCount: AvatarConfig = {
   face: 10,
   nose: 10,
   mouth: 10,
-  eye: 10,
+  eye: 14,
   eyebrow: 10,
   glass: 10,
   hair: 30,
