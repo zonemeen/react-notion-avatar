@@ -10,6 +10,7 @@ const Beard12 = () => {
       fillRule="evenodd"
       strokeLinecap="round"
       strokeLinejoin="round"
+      transform="translate(440.000000, 715.000000)"
     >
       <path
         d="M170.512 10.3241L165 26.4196"

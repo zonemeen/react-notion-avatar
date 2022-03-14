@@ -10,6 +10,7 @@ const Beard11 = () => {
       fillRule="evenodd"
       strokeLinecap="round"
       strokeLinejoin="round"
+      transform="translate(455.000000, 705.000000)"
     >
       <path
         fillRule="evenodd"

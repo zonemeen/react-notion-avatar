@@ -4,16 +4,16 @@ import { HexColorPicker } from 'react-colorful'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 import { useTranslation } from 'react-i18next'
 
-import Accessory from './parts/accessory/index'
-import Beard from './parts/beard/index'
-import Detail from './parts/detail/index'
-import Eye from './parts/eye/index'
-import Eyebrow from './parts/eyebrow/index'
-import Face from './parts/face/index'
-import Glass from './parts/glass/index'
-import Hair from './parts/hair/index'
-import Mouth from './parts/mouth/index'
-import Nose from './parts/nose/index'
+import Accessory from '../../package/accessory/index'
+import Beard from '../../package/beard/index'
+import Detail from '../../package/detail/index'
+import Eye from '../../package/eye/index'
+import Eyebrow from '../../package/eyebrow/index'
+import Face from '../../package/face/index'
+import Glass from '../../package/glass/index'
+import Hair from '../../package/hair/index'
+import Mouth from '../../package/mouth/index'
+import Nose from '../../package/nose/index'
 
 import SectionWrapper from './SectionWrapper/index'
 
@@ -42,7 +42,7 @@ const AvatarConfigCount: AvatarConfig = {
   hair: 30,
   accessory: 13,
   detail: 10,
-  beard: 13,
+  beard: 17,
 }
 
 const AvatarEditor = ({

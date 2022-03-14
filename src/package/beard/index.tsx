@@ -13,6 +13,10 @@ import Beard9 from './9'
 import Beard10 from './10'
 import Beard11 from './11'
 import Beard12 from './12'
+import Beard13 from './13'
+import Beard14 from './14'
+import Beard15 from './15'
+import Beard16 from './16'
 
 const Beard = (props: { type: number }) => {
   const { type } = props
@@ -55,6 +59,18 @@ const Beard = (props: { type: number }) => {
     }
     case 12: {
       return <Beard12 />
+    }
+    case 13: {
+      return <Beard13 />
+    }
+    case 14: {
+      return <Beard14 />
+    }
+    case 15: {
+      return <Beard15 />
+    }
+    case 16: {
+      return <Beard16 />
     }
     default: {
       return <Beard0 />
