@@ -11,6 +11,11 @@ import Eyebrow7 from './7'
 import Eyebrow8 from './8'
 import Eyebrow9 from './9'
 import Eyebrow10 from './10'
+import Eyebrow11 from './11'
+import Eyebrow12 from './12'
+import Eyebrow13 from './13'
+import Eyebrow14 from './14'
+import Eyebrow15 from './15'
 
 const Eyebrow = (props: { type: number }) => {
   const { type } = props
@@ -47,6 +52,21 @@ const Eyebrow = (props: { type: number }) => {
     }
     case 10: {
       return <Eyebrow10 />
+    }
+    case 11: {
+      return <Eyebrow11 />
+    }
+    case 12: {
+      return <Eyebrow12 />
+    }
+    case 13: {
+      return <Eyebrow13 />
+    }
+    case 14: {
+      return <Eyebrow14 />
+    }
+    case 15: {
+      return <Eyebrow15 />
     }
     default: {
       return <Eyebrow0 />
