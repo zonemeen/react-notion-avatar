@@ -11,6 +11,9 @@ import Nose7 from './7'
 import Nose8 from './8'
 import Nose9 from './9'
 import Nose10 from './10'
+import Nose11 from './11'
+import Nose12 from './12'
+import Nose13 from './13'
 
 const Nose = (props: { type: number }) => {
   const { type } = props
@@ -47,6 +50,15 @@ const Nose = (props: { type: number }) => {
     }
     case 10: {
       return <Nose10 />
+    }
+    case 11: {
+      return <Nose11 />
+    }
+    case 12: {
+      return <Nose12 />
+    }
+    case 13: {
+      return <Nose13 />
     }
     default: {
       return <Nose0 />
