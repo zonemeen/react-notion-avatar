@@ -11,6 +11,8 @@ import Glass7 from './7'
 import Glass8 from './8'
 import Glass9 from './9'
 import Glass10 from './10'
+import Glass11 from './11'
+import Glass12 from './12'
 
 const Glass = (props: { type: number }) => {
   const { type } = props
@@ -47,6 +49,12 @@ const Glass = (props: { type: number }) => {
     }
     case 10: {
       return <Glass10 />
+    }
+    case 11: {
+      return <Glass11 />
+    }
+    case 12: {
+      return <Glass12 />
     }
     default: {
       return <Glass0 />

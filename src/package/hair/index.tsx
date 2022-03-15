@@ -31,6 +31,33 @@ import Hair27 from './27'
 import Hair28 from './28'
 import Hair29 from './29'
 import Hair30 from './30'
+import Hair31 from './31'
+import Hair32 from './32'
+import Hair33 from './33'
+import Hair34 from './34'
+import Hair35 from './35'
+import Hair36 from './36'
+import Hair37 from './37'
+import Hair38 from './38'
+import Hair39 from './39'
+import Hair40 from './40'
+import Hair41 from './41'
+import Hair42 from './42'
+import Hair43 from './43'
+import Hair44 from './44'
+import Hair45 from './45'
+import Hair46 from './46'
+import Hair47 from './47'
+import Hair48 from './48'
+import Hair49 from './49'
+import Hair50 from './50'
+import Hair51 from './51'
+import Hair52 from './52'
+import Hair53 from './53'
+import Hair54 from './54'
+import Hair55 from './55'
+import Hair56 from './56'
+import Hair57 from './57'
 
 const Hair = (props: { type: number }) => {
   const { type } = props
@@ -127,6 +154,87 @@ const Hair = (props: { type: number }) => {
     }
     case 30: {
       return <Hair30 />
+    }
+    case 31: {
+      return <Hair31 />
+    }
+    case 32: {
+      return <Hair32 />
+    }
+    case 33: {
+      return <Hair33 />
+    }
+    case 34: {
+      return <Hair34 />
+    }
+    case 35: {
+      return <Hair35 />
+    }
+    case 36: {
+      return <Hair36 />
+    }
+    case 37: {
+      return <Hair37 />
+    }
+    case 38: {
+      return <Hair38 />
+    }
+    case 39: {
+      return <Hair39 />
+    }
+    case 40: {
+      return <Hair40 />
+    }
+    case 41: {
+      return <Hair41 />
+    }
+    case 42: {
+      return <Hair42 />
+    }
+    case 43: {
+      return <Hair43 />
+    }
+    case 44: {
+      return <Hair44 />
+    }
+    case 45: {
+      return <Hair45 />
+    }
+    case 46: {
+      return <Hair46 />
+    }
+    case 47: {
+      return <Hair47 />
+    }
+    case 48: {
+      return <Hair48 />
+    }
+    case 49: {
+      return <Hair49 />
+    }
+    case 50: {
+      return <Hair50 />
+    }
+    case 51: {
+      return <Hair51 />
+    }
+    case 52: {
+      return <Hair52 />
+    }
+    case 53: {
+      return <Hair53 />
+    }
+    case 54: {
+      return <Hair54 />
+    }
+    case 55: {
+      return <Hair55 />
+    }
+    case 56: {
+      return <Hair56 />
+    }
+    case 57: {
+      return <Hair57 />
     }
     default: {
       return <Hair0 />

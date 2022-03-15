@@ -11,11 +11,6 @@ import Face7 from './7'
 import Face8 from './8'
 import Face9 from './9'
 import Face10 from './10'
-import Face11 from './11'
-import Face12 from './12'
-import Face13 from './13'
-import Face14 from './14'
-import Face15 from './15'
 
 const Face = (props: { type: number }) => {
   const { type } = props
@@ -52,21 +47,6 @@ const Face = (props: { type: number }) => {
     }
     case 10: {
       return <Face10 />
-    }
-    case 11: {
-      return <Face11 />
-    }
-    case 12: {
-      return <Face12 />
-    }
-    case 13: {
-      return <Face13 />
-    }
-    case 14: {
-      return <Face14 />
-    }
-    case 15: {
-      return <Face15 />
     }
     default: {
       return <Face0 />
