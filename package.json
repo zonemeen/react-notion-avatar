@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:notion": "unbuild && cp package/types.ts notion-dist/index.d.ts",
+    "build:notion": "unbuild && cp src/package/types.ts notion-dist/index.d.ts",
     "prepublishOnly": "yarn build",
     "release": "bumpp --commit --push --tag && npm publish"
   },
