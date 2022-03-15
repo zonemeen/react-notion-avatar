@@ -35,7 +35,7 @@ type EditorProps = {
 const AvatarConfigCount: AvatarConfig = {
   face: 11,
   nose: 10,
-  mouth: 10,
+  mouth: 20,
   eye: 14,
   eyebrow: 16,
   glass: 13,
