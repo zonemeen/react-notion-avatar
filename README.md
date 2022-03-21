@@ -77,16 +77,16 @@ The Attributes can be passed into config
 
 | key         | type   | default | accept |
 | ----------- | ------ | ------- | ------ |
-| `face`      | number |         | 0~10   |
-| `eye`       | number |         | 0~10   |
-| `eyebrow`   | number |         | 0~10   |
-| `glass`     | number |         | 0~10   |
-| `hair`      | number |         | 0~30   |
-| `mouth`     | number |         | 0~10   |
-| `nose`      | number |         | 0~10   |
-| `accessory` | number | 0       | 0~10   |
-| `beard`     | number | 0       | 0~10   |
-| `detail`    | number | 0       | 0~10   |
+| `face`      | number |         | 0~11   |
+| `eye`       | number |         | 0~14   |
+| `eyebrow`   | number |         | 0~16   |
+| `glass`     | number |         | 0~13   |
+| `hair`      | number |         | 0~58   |
+| `mouth`     | number |         | 0~20   |
+| `nose`      | number |         | 0~14   |
+| `accessory` | number | 0       | 0~13   |
+| `beard`     | number | 0       | 0~17   |
+| `detail`    | number | 0       | 0~14   |
 
 or as React props
 
@@ -114,11 +114,11 @@ or as React props
    ```
 3. Start the server for the example:
    ```sh
-   $ yarn dev
+   $ yarn start
    ```
    Or
    ```sh
-   $ npm run dev
+   $ npm run start
    ```
 4. Open the browser to reivew the example:
    ```sh

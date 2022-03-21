@@ -74,16 +74,16 @@ yarn add react-notion-avatar
 
 | key         | type   | default | accept |
 | ----------- | ------ | ------- | ------ |
-| `face`      | number |         | 0~10   |
-| `eye`       | number |         | 0~10   |
-| `eyebrow`   | number |         | 0~10   |
-| `glass`     | number |         | 0~10   |
-| `hair`      | number |         | 0~30   |
-| `mouth`     | number |         | 0~10   |
-| `nose`      | number |         | 0~10   |
-| `accessory` | number | 0       | 0~10   |
-| `beard`     | number | 0       | 0~10   |
-| `detail`    | number | 0       | 0~10   |
+| `face`      | number |         | 0~11   |
+| `eye`       | number |         | 0~14   |
+| `eyebrow`   | number |         | 0~16   |
+| `glass`     | number |         | 0~13   |
+| `hair`      | number |         | 0~58   |
+| `mouth`     | number |         | 0~20   |
+| `nose`      | number |         | 0~14   |
+| `accessory` | number | 0       | 0~13   |
+| `beard`     | number | 0       | 0~17   |
+| `detail`    | number | 0       | 0~14   |
 
 或作为 `React props` 属性传入：
 
@@ -111,11 +111,11 @@ yarn add react-notion-avatar
    ```
 3. 运行项目：
    ```sh
-   $ yarn dev
+   $ yarn start
    ```
    或
    ```sh
-   $ npm run dev
+   $ npm run start
    ```
 4. 打开浏览器预览：
    ```sh
