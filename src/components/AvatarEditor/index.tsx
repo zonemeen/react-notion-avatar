@@ -16,7 +16,7 @@ import Mouth from '../../package/mouth/index'
 import Nose from '../../package/nose/index'
 
 import SectionWrapper from './SectionWrapper/index'
-
+import { AvatarConfigCount } from '../../package/const'
 import './index.scss'
 
 type EditorProps = {
@@ -30,19 +30,6 @@ type EditorProps = {
   downloadAvatar: () => void
   getRandomStyle: () => void
   setFlipped: (flipped: boolean) => void
-}
-
-const AvatarConfigCount: AvatarConfig = {
-  face: 11,
-  nose: 14,
-  mouth: 20,
-  eye: 14,
-  eyebrow: 16,
-  glass: 13,
-  hair: 58,
-  accessory: 13,
-  detail: 14,
-  beard: 17,
 }
 
 const AvatarEditor = ({
