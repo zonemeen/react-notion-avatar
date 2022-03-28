@@ -28,31 +28,10 @@ p {
   color: rgb(245, 245, 245);
 }
 
-.overFlow {
-  overflow: auto;
-  &::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-    opacity: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    opacity: 0;
-    border-radius: 4px;
-  }
-  &:hover::-webkit-scrollbar-thumb {
-    opacity: 1;
-    background: hsla(0, 0%, 53%, 0.4);
-  }
-  &:hover::-webkit-scrollbar-track {
-    opacity: 1;
-    background: hsla(0, 0%, 53%, 0.1);
-  }
-}
-
 .flip {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: fliph;
+  filter: flipH();
 }

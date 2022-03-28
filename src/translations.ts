@@ -19,6 +19,8 @@ export const Translations = [
       'tip.Random': 'Random',
       'tip.Config': 'Config',
       'tip.Download': 'Download',
+      Copy: 'Copy',
+      Copied: 'Copied!',
     },
   },
   {
@@ -41,6 +43,8 @@ export const Translations = [
       'tip.Random': '随机',
       'tip.Config': '配置',
       'tip.Download': '下载',
+      Copy: '复制',
+      Copied: '已复制!',
     },
   },
 ]

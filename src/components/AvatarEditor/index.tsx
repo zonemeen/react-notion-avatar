@@ -18,6 +18,7 @@ import Nose from '../../package/nose/index'
 import SectionWrapper from './SectionWrapper/index'
 import { AvatarConfigCount } from '../../package/const'
 import './index.scss'
+import { copyTextToClipboard } from '../../utils/copy'
 
 type EditorProps = {
   config: AvatarConfig
@@ -48,6 +49,7 @@ const AvatarEditor = ({
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)
   const [isPaletteShow, setIsPaletteShow] = useState(false)
+  const [copied, setCopied] = React.useState(false)
   const switchConfig = (type: AvatarPart, currentIdx: number) => {
     const optLength = AvatarConfigCount[type]
     const newIdx = (currentIdx + 1) % optLength
@@ -259,6 +261,38 @@ const AvatarEditor = ({
             <pre className="flex flex-wrap text-xs w-80 overFlow highres:text-sm">
               {genCodeString(config)}
             </pre>
+            <button
+              onClick={() => {
+                copyTextToClipboard(genCodeString(config))
+                setCopied(true)
+                setTimeout(() => {
+                  setCopied(false)
+                }, 2000)
+              }}
+              className={classnames(
+                'bg-gray-400 absolute text-black top-4 right-4 rounded-lg px-2 py-1 text-xs inline-flex items-center active:bg-blue-500 active:text-white',
+                {
+                  'text-blue-600': copied,
+                }
+              )}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                />
+              </svg>
+              <span className="ml-1">{copied ? t('Copied') : t('Copy')}</span>
+            </button>
           </div>
         )}
       </div>

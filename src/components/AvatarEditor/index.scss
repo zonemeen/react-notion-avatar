@@ -52,6 +52,26 @@
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.2s ease-out;
+    .overFlow {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        opacity: 0;
+      }
+      &::-webkit-scrollbar-thumb {
+        opacity: 0;
+        border-radius: 4px;
+      }
+      &:hover::-webkit-scrollbar-thumb {
+        opacity: 1;
+        background: hsla(0, 0%, 53%, 0.4);
+      }
+      &:hover::-webkit-scrollbar-track {
+        opacity: 1;
+        background: hsla(0, 0%, 53%, 0.1);
+      }
+    }
     &.active {
       opacity: 1;
       transform: translateY(0);
