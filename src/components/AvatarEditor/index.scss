@@ -78,3 +78,10 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .AvatarEditor {
+    width: 90vw;
+    overflow-x: auto;
+  }
+}

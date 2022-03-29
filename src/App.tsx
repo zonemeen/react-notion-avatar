@@ -88,7 +88,7 @@ const App = () => {
     <div className="App flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 flex flex-col items-center justify-center">
-        <div id="notionAvatar" className="mb-32">
+        <div id="notionAvatar" className="pb-32">
           <NotionAvatar
             className={classnames('w-64 h-64 highres:w-80 highres:h-80', {
               flip: flipped,
@@ -115,8 +115,8 @@ const App = () => {
       </main>
       <Footer language={language} onLanguageChange={onChangeLanguage} />
       <div className="gradient-bg">
-        <div className="gradient-top"></div>
-        <div className="gradient-bottom"></div>
+        <div className="gradient-top" />
+        <div className="gradient-bottom" />
       </div>
     </div>
   )

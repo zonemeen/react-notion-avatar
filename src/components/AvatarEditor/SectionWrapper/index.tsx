@@ -16,7 +16,7 @@ export default function sectionWrapper(props: {
       data-tip={tip}
       onClick={switchConfig}
     >
-      <div className="relative w-full h-full">
+      <div className="w-12 h-12">
         <div className="childrenWrapper absolute top-0 left-0 w-full h-full flex items-center justify-center">
           {isSvgElement ? (
             <svg
