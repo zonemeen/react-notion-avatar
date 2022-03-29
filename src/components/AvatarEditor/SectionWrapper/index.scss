@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   &:hover {
     animation: jelly 0.5s;
     &:after {
