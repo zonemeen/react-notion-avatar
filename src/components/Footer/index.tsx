@@ -1,9 +1,8 @@
 import React from 'react'
-import { LangType } from '../../i18n'
 
 type FooterProps = {
-  language: LangType
-  onLanguageChange: (language: LangType) => void
+  language: string
+  onLanguageChange: (language: string) => void
 }
 
 export default function footer({ language, onLanguageChange }: FooterProps) {

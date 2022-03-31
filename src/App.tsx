@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next'
 
 import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
-import { LangType } from './i18n'
 
 import Header from './components/Header/index'
 import AvatarEditor from './components/AvatarEditor/index'
@@ -21,9 +20,9 @@ const App = () => {
   const [shape, setShape] = useState('circle' as ShapeTypes)
   const [bgColor, setBgColor] = useState('#ffffff')
   const [flipped, setFlipped] = useState(false)
-  const [language, setLanguage] = useState('en' as LangType)
+  const [language, setLanguage] = useState('en')
 
-  const onChangeLanguage = (language: LangType) => {
+  const onChangeLanguage = (language: string) => {
     setLanguage(language)
     i18n.changeLanguage(language)
   }
