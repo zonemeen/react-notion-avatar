@@ -17,7 +17,7 @@ const App = () => {
   const [config, setConfig] = useState({
     ...(getRandomConfig() as AvatarConfig),
   })
-  const [shape, setShape] = useState('circle' as ShapeTypes)
+  const [shape, setShape] = useState<ShapeTypes>('circle')
   const [bgColor, setBgColor] = useState('#ffffff')
   const [flipped, setFlipped] = useState(false)
   const [language, setLanguage] = useState('en')
