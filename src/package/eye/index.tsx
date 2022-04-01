@@ -14,9 +14,9 @@ import Eye10 from './10'
 import Eye11 from './11'
 import Eye12 from './12'
 import Eye13 from './13'
+import { TypeProps } from '../types'
 
-const Eye = (props: { type: number }) => {
-  const { type } = props
+const Eye: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Eye0 />

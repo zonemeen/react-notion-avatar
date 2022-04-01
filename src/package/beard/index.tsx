@@ -17,9 +17,9 @@ import Beard13 from './13'
 import Beard14 from './14'
 import Beard15 from './15'
 import Beard16 from './16'
+import { TypeProps } from '../types'
 
-const Beard = (props: { type: number }) => {
-  const { type } = props
+const Beard: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Beard0 />

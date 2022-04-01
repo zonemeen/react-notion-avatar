@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Accessory5 = () => {
+const Accessory5: React.FC = () => {
   return (
     <g
       id="Accessories/-5"

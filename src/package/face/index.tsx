@@ -11,9 +11,9 @@ import Face7 from './7'
 import Face8 from './8'
 import Face9 from './9'
 import Face10 from './10'
+import { TypeProps } from '../types'
 
-const Face = (props: { type: number }) => {
-  const { type } = props
+const Face: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Face0 />

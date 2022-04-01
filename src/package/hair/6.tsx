@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hair6 = () => {
+const Hair6: React.FC = () => {
   return (
     <g
       id="Hairstyle/-6"

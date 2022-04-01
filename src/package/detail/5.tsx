@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Detail5 = () => {
+const Detail5: React.FC = () => {
   return (
     <g
       id="Details/-5"

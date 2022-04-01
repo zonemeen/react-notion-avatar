@@ -13,9 +13,9 @@ import Accessory9 from './9'
 import Accessory10 from './10'
 import Accessory11 from './11'
 import Accessory12 from './12'
+import { TypeProps } from '../types'
 
-const Accessory = (props: { type: number }) => {
-  const { type } = props
+const Accessory: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Accessory0 />

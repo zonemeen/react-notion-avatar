@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Mouth12 = () => {
+const Mouth12: React.FC = () => {
   return (
     <g
       id="Mouth/-12"

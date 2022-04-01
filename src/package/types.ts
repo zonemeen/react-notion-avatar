@@ -1,3 +1,7 @@
+export interface TypeProps {
+  type: number
+}
+
 type Style = {
   [key: string]: string | number | boolean
 }

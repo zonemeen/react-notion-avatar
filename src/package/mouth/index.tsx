@@ -20,9 +20,9 @@ import Mouth16 from './16'
 import Mouth17 from './17'
 import Mouth18 from './18'
 import Mouth19 from './19'
+import { TypeProps } from '../types'
 
-const Mouth = (props: { type: number }) => {
-  const { type } = props
+const Mouth: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Mouth0 />

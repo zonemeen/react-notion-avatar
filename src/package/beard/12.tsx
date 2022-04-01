@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Beard12 = () => {
+const Beard12: React.FC = () => {
   return (
     <g
       id="Beard/-12"

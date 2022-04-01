@@ -1,14 +1,14 @@
 import React from 'react'
 
 import './index.scss'
-
-export default function sectionWrapper(props: {
+interface SectionProps {
   className?: string
   children: JSX.Element
   switchConfig?: () => void
   tip: string
   isSvgElement?: boolean
-}) {
+}
+const sectionWrapper: React.FC<SectionProps> = (props) => {
   const { className = '', children, switchConfig, tip, isSvgElement } = props
   return (
     <div
@@ -34,3 +34,5 @@ export default function sectionWrapper(props: {
     </div>
   )
 }
+
+export default sectionWrapper

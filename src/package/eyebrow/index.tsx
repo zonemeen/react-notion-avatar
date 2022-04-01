@@ -16,9 +16,9 @@ import Eyebrow12 from './12'
 import Eyebrow13 from './13'
 import Eyebrow14 from './14'
 import Eyebrow15 from './15'
+import { TypeProps } from '../types'
 
-const Eyebrow = (props: { type: number }) => {
-  const { type } = props
+const Eyebrow: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Eyebrow0 />

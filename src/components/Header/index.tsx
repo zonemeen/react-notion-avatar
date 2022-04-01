@@ -2,7 +2,7 @@ import React from 'react'
 
 import './index.scss'
 
-export default function header() {
+const header: React.FC = () => {
   return (
     <header className="header">
       <div className="logo">
@@ -39,3 +39,5 @@ export default function header() {
     </header>
   )
 }
+
+export default header

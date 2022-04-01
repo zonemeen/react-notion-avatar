@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Eyebrow1 = () => {
+const Eyebrow1: React.FC = () => {
   return (
     <g
       id="Eyebrows/-1"

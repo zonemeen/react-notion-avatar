@@ -58,9 +58,9 @@ import Hair54 from './54'
 import Hair55 from './55'
 import Hair56 from './56'
 import Hair57 from './57'
+import { TypeProps } from '../types'
 
-const Hair = (props: { type: number }) => {
-  const { type } = props
+const Hair: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Hair0 />

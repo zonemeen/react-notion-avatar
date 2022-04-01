@@ -10,9 +10,9 @@ import Glass from './glass/index'
 import Hair from './hair/index'
 import Mouth from './mouth/index'
 import Nose from './nose/index'
-import { NotionAvatarProps, AvatarConfig } from './types'
+import { NotionAvatarProps, AvatarConfig, TypeProps } from './types'
 
-const NotionAvatar = (props: NotionAvatarProps) => {
+const NotionAvatar: React.FC<NotionAvatarProps> = (props) => {
   const { className, style, shape = 'circle', bgColor, config } = props
   const {
     face,

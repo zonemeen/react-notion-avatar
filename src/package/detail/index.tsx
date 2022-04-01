@@ -14,9 +14,9 @@ import Detail10 from './10'
 import Detail11 from './11'
 import Detail12 from './12'
 import Detail13 from './13'
+import { TypeProps } from '../types'
 
-const Detail = (props: { type: number }) => {
-  const { type } = props
+const Detail: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Detail0 />

@@ -33,7 +33,7 @@ type EditorProps = {
   setFlipped: (flipped: boolean) => void
 }
 
-const AvatarEditor = ({
+const AvatarEditor: React.FC<EditorProps> = ({
   config,
   bgColor,
   shape,
@@ -44,7 +44,7 @@ const AvatarEditor = ({
   downloadAvatar,
   getRandomStyle,
   setFlipped,
-}: EditorProps) => {
+}) => {
   const { t } = useTranslation()
   const shapes = ['circle', 'rounded', 'square']
   const [isCodeShow, setIsCodeShow] = useState(false)

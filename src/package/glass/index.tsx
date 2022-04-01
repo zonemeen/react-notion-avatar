@@ -13,9 +13,9 @@ import Glass9 from './9'
 import Glass10 from './10'
 import Glass11 from './11'
 import Glass12 from './12'
+import { TypeProps } from '../types'
 
-const Glass = (props: { type: number }) => {
-  const { type } = props
+const Glass: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Glass0 />

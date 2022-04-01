@@ -1,11 +1,11 @@
 import React from 'react'
 
-type FooterProps = {
+interface FooterProps {
   language: string
   onLanguageChange: (language: string) => void
 }
 
-export default function footer({ language, onLanguageChange }: FooterProps) {
+const footer: React.FC<FooterProps> = ({ language, onLanguageChange }) => {
   return (
     <footer className="flex items-center justify-center text-gray-400 text-sm pb-5">
       <a
@@ -26,3 +26,5 @@ export default function footer({ language, onLanguageChange }: FooterProps) {
     </footer>
   )
 }
+
+export default footer

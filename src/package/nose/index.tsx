@@ -14,9 +14,9 @@ import Nose10 from './10'
 import Nose11 from './11'
 import Nose12 from './12'
 import Nose13 from './13'
+import { TypeProps } from '../types'
 
-const Nose = (props: { type: number }) => {
-  const { type } = props
+const Nose: React.FC<TypeProps> = ({ type }) => {
   switch (type) {
     case 0: {
       return <Nose0 />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Eye2 = () => {
+const Eye2: React.FC = () => {
   return (
     <g
       id="Eyes/-2"

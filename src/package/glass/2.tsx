@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Glass2 = () => {
+const Glass2: React.FC = () => {
   return (
     <g
       id="Glasses/-2"
