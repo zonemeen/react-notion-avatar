@@ -1,6 +1,6 @@
 {
   "name": "react-notion-avatar",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "react library for generating notion-style avatar",
   "homepage": "/",
   "exports": {
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "build:notion": "unbuild && cp src/package/types.ts notion-dist/index.d.ts",
     "prepublishOnly": "yarn build:notion",
-    "release": "bumpp --commit --push --tag && npm publish"
+    "release": "bumpp --commit --push --tag"
   },
   "repository": {
     "type": "git",
