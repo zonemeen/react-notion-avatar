@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShapeBorderRadius } from './const'
-import Accessory from './accessory/index'
+import Accessory from './accessory'
 import Beard from './beard/index'
 import Detail from './detail/index'
 import Eye from './eye/index'

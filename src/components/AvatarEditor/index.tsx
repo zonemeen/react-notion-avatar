@@ -4,7 +4,7 @@ import { HexColorPicker } from 'react-colorful'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 import { useTranslation } from 'react-i18next'
 
-import Accessory from '../../package/accessory/index'
+import Accessory from '../../package/accessory'
 import Beard from '../../package/beard/index'
 import Detail from '../../package/detail/index'
 import Eye from '../../package/eye/index'
@@ -20,7 +20,7 @@ import { AvatarConfigCount } from '../../package/const'
 import './index.scss'
 import { copyTextToClipboard } from '../../utils/copy'
 
-type EditorProps = {
+interface EditorProps {
   config: AvatarConfig
   bgColor: string
   shape: ShapeTypes

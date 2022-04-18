@@ -5,7 +5,7 @@ import confetti from 'canvas-confetti'
 import classnames from 'classnames'
 import { useTranslation } from 'react-i18next'
 
-import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
+import NotionAvatar, { getRandomConfig } from './package/index'
 import type { AvatarConfig, AvatarPart, ShapeTypes } from 'react-notion-avatar'
 
 import Header from './components/Header/index'
