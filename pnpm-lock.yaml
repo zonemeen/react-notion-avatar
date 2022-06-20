@@ -25,7 +25,7 @@ specifiers:
   react-colorful: ^5.5.1
   react-dom: ^17.0.2
   react-i18next: ^11.15.6
-  react-notion-avatar: ^1.1.11
+  react-notion-avatar: ^1.1.12
   react-scripts: ^5.0.0
   sass: ^1.49.9
   tailwindcss: ^3.0.2
@@ -52,7 +52,7 @@ dependencies:
   react-colorful: registry.npmmirror.com/react-colorful/5.5.1_sfoxds7t5ydpegc3knd667wn6m
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
   react-i18next: registry.npmmirror.com/react-i18next/11.16.9_awtyodrxe4f2jfjjdgkw6pjaf4
-  react-notion-avatar: 1.1.11_sass@1.52.1
+  react-notion-avatar: 1.1.12_sass@1.52.1
   react-scripts: registry.npmmirror.com/react-scripts/5.0.1_mnkizjlo4twqilnotmut2yhiaa
   typescript: registry.npmmirror.com/typescript/4.7.2
 
@@ -8394,8 +8394,8 @@ packages:
     resolution: {integrity: sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==}
     dev: false
 
-  /react-notion-avatar/1.1.11_sass@1.52.1:
-    resolution: {integrity: sha512-8PXKpET0/eUU/mgZouvlCKwKU5qo0NHoH5hrK4bNqfSSlqj4KxR7TmVhiX0i61RMIzxVV0qRCWL8P1m1jNKplQ==}
+  /react-notion-avatar/1.1.12_sass@1.52.1:
+    resolution: {integrity: sha512-9L2R2dBa8iZTNsZ7W8O1mq3cPsIu06DM6Gmum7n2TOFxOkhETNsSwTpb1Z8bqnZBDiJY9QKRgpGDFQuF3xQ5Ag==}
     dependencies:
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
