@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface TypeProps {
   type: number
 }
@@ -33,6 +35,6 @@ export type AvatarPart = keyof AvatarConfig
 
 declare const getRandomConfig: () => AvatarConfig
 
-declare const NotionAvatar: (props: NotionAvatarProps) => JSX.Element
+declare const NotionAvatar: React.FC<NotionAvatarProps>
 
-export { NotionAvatar, getRandomConfig }
+export { NotionAvatar as default, getRandomConfig }
