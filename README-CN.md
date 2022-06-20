@@ -27,7 +27,7 @@ yarn add react-notion-avatar
 
 1. 导入该组件。
    ```js
-   import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
+   import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
    ```
 2. 必须设置 config 属性，这样你就可以固定用这个配置渲染同一个头像。
 

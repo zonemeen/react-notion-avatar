@@ -27,7 +27,7 @@ yarn add react-notion-avatar
 
 1. Import the component.
    ```js
-   import { NotionAvatar, getRandomConfig } from 'react-notion-avatar'
+   import NotionAvatar, { getRandomConfig } from 'react-notion-avatar'
    ```
 2. Set the required config attribute, so that you can always rendering a same avatar with the configuration.
 
