@@ -73,7 +73,7 @@
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
     "tailwindcss": "^3.0.2",
-    "unbuild": "^0.6.9"
+    "unbuild": "0.8.8"
   },
   "eslintConfig": {
     "extends": [
